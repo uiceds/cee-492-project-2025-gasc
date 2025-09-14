@@ -7,15 +7,15 @@
   ],
   authors: (
     (
-      name: "Author 1",
+      name: "Safi",
       department: [Department 1],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
       email: "author1@illinois.edu",
     ),
     (
-      name: "Author 2",
-      department: [Department 2],
+      name: "Garret Anderson",
+      department: CEE (Geotechnical),
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
       email: "author2@illinois.edu",
