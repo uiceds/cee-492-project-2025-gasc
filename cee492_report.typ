@@ -60,7 +60,7 @@ To add figures to your report, save the image file in the `figures` folder and u
 
 You can make sub, sub-sub, and sub-sub-sub sections by adding `=` signs in front of the section title. There needs to be a space between the last `=` sign and the title text.
 
-= Second Section
+= Dataset - Water-surface profiles near selected bridge sites
 
 You can add tables using the `#table` command. Here is an example table:
 
