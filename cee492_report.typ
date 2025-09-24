@@ -45,7 +45,7 @@ The load paths of bridges eventually lead to the Earth and the soil or rock with
 
 == Variables Involved with Scour
 
-Channel slope, cross-sectional area, volumentric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructure.  
+Channel slope, cross-sectional area, volumentric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
 #figure(
   image("figures/Scour1.png", width: 100%),
   caption: [Scour at bridge foundation; risk of collapse. (Courtesy: Oregon Department of Transportation.)],
