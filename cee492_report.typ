@@ -1,35 +1,35 @@
 #import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
-  title: [Report Template],
+  title: [CEE 492 Group Project],
   abstract: [
     This is where you put your abstract. Abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract.
   ],
   authors: (
     (
       name: "Garret Anderson",
-      department: [Department 1],
+      department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
       email: "garreta2@illinois.edu",
     ),
     (
       name: "Andrew Farver",
-      department: [Department 2],
+      department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
       email: "farver1@illinois.edu",
     ),
  (
       name: "Safi Sawadogo",
-      department: [Department 2],
+      department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
       email: "safiata2@illinois.edu",
     ),
  (
       name: "Corey Withroe",
-      department: [Department 2],
+      department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
       email: "withroe2@illinois.edu",
