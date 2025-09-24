@@ -75,15 +75,15 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
 
 You can reference the table like this: @table-example.
 
-== Various Text Formatting Options
+== State of Montana Site Data
 
-You can make text _italic_ by surrounding it with `_` symbols, *bold* by surrounding it with `*` symbols, and _*bold italic*_ by combining both. You can also use `#code` to format inline code snippets.
-
-You can create bullet point lists using `-` or `*` symbols:
-- Bullet point 1
-- Bullet point 2
-  - Sub bullet point 1
-  - Sub bullet point 2
+The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
+- Cross Sectional Geometry data at selected bridge sites in Montana
+- Longitudinal streambed profiles along the sides of piers at selected bridge sites
+- Pier structure geometry data for section and side views at seleted bridge sites
+  - Pier structure data for section views
+  - pier structure data for side views
+- Water surface profiles near selected bridge sites
 
 
 You can create numbered lists using numbers followed by a period:
