@@ -11,28 +11,28 @@
       location: [Tuscon, AZ USA],
       email: "author1@illinois.edu",
       department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign]
+      organization: [University of Illinois Urbana-Champaign],
     ),
     (
       name: "Corey Withroe",
       location: [Salem, OR USA],
       email: "withroe2@illinois.edu",
       department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign]
+      organization: [University of Illinois Urbana-Champaign],
     ),
    (
       name: "Garret Anderson",
       location: [Seattle, WA, USA],
       email: "author2@illinois.edu",
       department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign]
+      organization: [University of Illinois Urbana-Champaign],
     ),
    (
       name: "Andrew Farver",
       location: [Washington, DC USA],
       email: "author2@illinois.edu",
       department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign]
+      organization: [University of Illinois Urbana-Champaign],
     ),
 
   index-terms: ("Optional", "Keywords", "Here"),
