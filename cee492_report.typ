@@ -1,4 +1,4 @@
-t#import "@preview/charged-ieee:0.1.4": ieee
+#import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
   title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
@@ -42,10 +42,6 @@ authors: (
 = The Problem of Bridge Scour
 
 The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States.  There are complex interactions which drive potential bridge failures. 1-dimensional analysis may provide a preliminary view of scour vulnerability but newer and larger datasets allow for a deeper analysis. 
-
-Other options to get BibTeX entries for your references include https://www.bibtex.com/converters/ and asking ChatGPT to generate the a BibTeX entry for you. (If you use ChatGPT, make sure to verify the generated BibTeX entry for correctness.)
-
-More information about citations can be found in the Typst documentation: https://typst.app/docs/reference/model/cite.
 
 == Variables Involved with Scour
 
@@ -91,7 +87,7 @@ Which includes:
 
 == Equations
 
-Athough there are five types of scour, we will focus on the to main causes, which are governed by emperical equations accordingly
+Athough there are five types of scour, we will focus on the two main causes, which are governed by emperical equations accordingly
 1. Contraction Scour - Laursen Live Bed or Clear Water Scour Equation
 2. Local Scour
   1. Pier Scour - The Colorado State University (CSU) Equation
