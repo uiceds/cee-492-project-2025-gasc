@@ -66,7 +66,7 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
 #figure(
   caption: [Bridge Cross-Sectional Profile],
   table(
-    columns: (auto, auto, auto)
+    columns: (auto, auto, auto),
     table.header([*Distance from Abutment*], [*Channel Depth*], [*Below Water Level*]),
     "0.0", "1.2", "No",
     "4.0", "2.4", "No",
@@ -78,6 +78,8 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
 The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: 
 
 - https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
+
+Which includes: 
 
 - Cross Sectional Geometry data at selected bridge sites in Montana
 - Longitudinal streambed profiles along the sides of piers at selected bridge sites
