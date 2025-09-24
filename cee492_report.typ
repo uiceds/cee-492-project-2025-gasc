@@ -1,45 +1,39 @@
 #import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
-  title: [Report Template],
+  title: [CEE 492 Group Project - The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
   abstract: [
-    This is where you put your abstract. Abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract.
+    Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States.  With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of Data Science and the Julia programming language in investigating specific bridge sites for that end. 
   ],
   authors: (
     (
-      name: "Safi",
-      department: [Department 1],
-      organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      name: "Safi Sawadogo",
+      location: [Tuscon, AZ USA],
       email: "author1@illinois.edu",
     ),
     (
       name: "Corey Withroe",
-      department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      location: [Salem, OR USA],
       email: "withroe2@illinois.edu",
     ),
    (
-      name: "Author 3",
-      department: [Department 3],
-      organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      name: "Garret Anderson",
+      location: [Seattle, WA, USA],
       email: "author2@illinois.edu",
     ),
    (
-      name: "Author 4",
-      department: [Department 4],
-      organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      name: "Andrew Farver",
+      location: [Washington, DC USA],
       email: "author2@illinois.edu",
     ),
+   (  department: [Civil and Environmental Engineering],
+      organization: [University of Illinois Urbana-Champaign],
   ),
   index-terms: ("Optional", "Keywords", "Here"),
   bibliography: bibliography("refs.bib"),
 )
 
-= First Section
+= The Problem of Bridge Scour
 
 To add citations to the report, go to https://scholar.google.com, search for a paper, click on the quotation mark icon below the search result, and copy the BibTeX entry. Then paste it into the `refs.bib` file. You can cite papers using the `@` symbol followed by the citation key, e.g., @lowry1951protein.
 
@@ -47,7 +41,7 @@ Other options to get BibTeX entries for your references include https://www.bibt
 
 More information about citations can be found in the Typst documentation: https://typst.app/docs/reference/model/cite.
 
-== First Subsection
+== Schoharie Creek Bridge collapse
 
 To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
 
@@ -56,11 +50,11 @@ To add figures to your report, save the image file in the `figures` folder and u
   caption: [A humble request. (Copyright: University of the Fraser Valley.)],
 ) <proofread>
 
-=== First Subsubsection
+=== Schoharie Creek Bridge collapse
 
 You can make sub, sub-sub, and sub-sub-sub sections by adding `=` signs in front of the section title. There needs to be a space between the last `=` sign and the title text.
 
-= Second Section
+= Dataset Usage
 
 You can add tables using the `#table` command. Here is an example table:
 
