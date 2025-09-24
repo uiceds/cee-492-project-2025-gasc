@@ -1,45 +1,45 @@
 #import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
-  title: [CEE 492 Group Project - The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
+  title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
   abstract: [
-    Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States.  With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of Data Science and the Julia programming language in investigating specific bridge sites for that end. 
+    This is where you put your abstract. Abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract.
   ],
   authors: (
     (
       name: "Garret Anderson",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Seattle, WAL, USA],
+      location: [Urbana, IL, USA],
       email: "garreta2@illinois.edu",
     ),
     (
       name: "Andrew Farver",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Washington, DC, USA],
+      location: [Urbana, IL, USA],
       email: "farver1@illinois.edu",
     ),
-  (
+ (
       name: "Safi Sawadogo",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Tuscon AZ, USA],
-      email: "safiata23@illinois.edu",
+      location: [Urbana, IL, USA],
+      email: "safiata2@illinois.edu",
     ),
-    (
+ (
       name: "Corey Withroe",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Salem, OR, USA],
-      email: "author4@illinois.edu",
+      location: [Urbana, IL, USA],
+      email: "withroe2@illinois.edu",
     ),
-
+  ),
   index-terms: ("Optional", "Keywords", "Here"),
   bibliography: bibliography("refs.bib"),
 )
 
-= The Bridge Scour Problem
+= The Problem of Bridge Scour
 
 To add citations to the report, go to https://scholar.google.com, search for a paper, click on the quotation mark icon below the search result, and copy the BibTeX entry. Then paste it into the `refs.bib` file. You can cite papers using the `@` symbol followed by the citation key, e.g., @lowry1951protein.
 
@@ -47,7 +47,7 @@ Other options to get BibTeX entries for your references include https://www.bibt
 
 More information about citations can be found in the Typst documentation: https://typst.app/docs/reference/model/cite.
 
-== Causes and Variables in Bridge Scour
+== First Subsection
 
 To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
 
@@ -56,11 +56,11 @@ To add figures to your report, save the image file in the `figures` folder and u
   caption: [A humble request. (Copyright: University of the Fraser Valley.)],
 ) <proofread>
 
-=== Schoharie Creek Bridge collapse
+=== First Subsubsection
 
 You can make sub, sub-sub, and sub-sub-sub sections by adding `=` signs in front of the section title. There needs to be a space between the last `=` sign and the title text.
 
-= Dataset - Water-surface profiles near selected bridge sites
+= Second Section
 
 You can add tables using the `#table` command. Here is an example table:
 
