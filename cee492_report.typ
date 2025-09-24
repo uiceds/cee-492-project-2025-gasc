@@ -64,20 +64,21 @@ In 1987, the Schorharie Creek Bridge collapse in New York State, which failed du
 State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
 
 #figure(
-  caption: [Example Table],
+  caption: [Bridge Cross-Sectional Profile],
   table(
-    columns: (auto, auto, auto),
-    table.header([*Column 1*], [*Column 2*], [*Column 3*]),
-    "Row 1", "Data 1", [Data 2],
-    image("figures/proof-read.png", width: 40%), "Data 3", "Data 4",
+    columns: (auto, auto, auto)
+    table.header([*Distance from Abutment*], [*Channel Depth*], [*Below Water Level*]),
+    "0.0", "1.2", "No",
+    "4.0", "2.4", "No",
   ),
 ) <table-example>
 
-You can reference the table like this: @table-example.
-
 == State of Montana Site Data
 
-The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
+The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: 
+
+- https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
+
 - Cross Sectional Geometry data at selected bridge sites in Montana
 - Longitudinal streambed profiles along the sides of piers at selected bridge sites
 - Pier structure geometry data for section and side views at seleted bridge sites
@@ -94,14 +95,6 @@ Athough there are five types of scour, we will focus on the to main causes, whic
   1. Pier Scour - The Colorado State University (CSU) Equation
   2. Abutment Scour - The Frolich Equation
 
-
-
-
-You can create equations using `$` symbols. For example, you can make an inline equation like this $E=m c^2$ or a displayed equation like this:
-
-$ x < y => x gt.eq.not y $ <eq1>
-
-You can reference the equation like this: Eq. @eq1.
 
 #figure(
   image("figures/Scour2.png", width: 100%),
