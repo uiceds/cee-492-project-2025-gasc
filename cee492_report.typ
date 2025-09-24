@@ -47,20 +47,20 @@ Other options to get BibTeX entries for your references include https://www.bibt
 
 More information about citations can be found in the Typst documentation: https://typst.app/docs/reference/model/cite.
 
-== Schoharie Creek Bridge collapse
+== Variables Involved with Scour
 
 To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
 
 #figure(
-  image("Scour1.png", width: 80%),
+  image("figures/Scour1.png", width: 80%),
   caption: [A humble request. (Copyright: University of the Fraser Valley.)],
 ) <proofread>
 
-=== First Subsubsection
+=== Schoharie Creek Bridge collapse
 
 You can make sub, sub-sub, and sub-sub-sub sections by adding `=` signs in front of the section title. There needs to be a space between the last `=` sign and the title text.
 
-= Second Section
+= Dataset - Water-surface profiles near selected bridge sites
 
 You can add tables using the `#table` command. Here is an example table:
 
