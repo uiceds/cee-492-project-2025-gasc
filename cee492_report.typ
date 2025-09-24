@@ -31,7 +31,7 @@
   bibliography: bibliography("refs.bib"),
 )
 
-== The Problem of Bridge Scour
+= The Problem of Bridge Scour
 
 To add citations to the report, go to https://scholar.google.com, search for a paper, click on the quotation mark icon below the search result, and copy the BibTeX entry. Then paste it into the `refs.bib` file. You can cite papers using the `@` symbol followed by the citation key, e.g., @lowry1951protein.
 
@@ -39,7 +39,7 @@ Other options to get BibTeX entries for your references include https://www.bibt
 
 More information about citations can be found in the Typst documentation: https://typst.app/docs/reference/model/cite.
 
-== Schoharie Creek Bridge collapse
+= Schoharie Creek Bridge collapse
 
 To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
 
