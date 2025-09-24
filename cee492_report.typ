@@ -1,45 +1,31 @@
 #import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
-  title: [CEE 492 Group Project - The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
+  title: [Report Template],
   abstract: [
-    Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States.  With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of Data Science and the Julia programming language in investigating specific bridge sites for that end. 
+    This is where you put your abstract. Abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract.
   ],
   authors: (
     (
-      name: "Safi Sawadogo",
-      department: [Civil and Environmental Engineering],
+      name: "Author 1",
+      department: [Department 1],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Tuscon, AZ USA],
+      location: [Urbana, IL, USA],
       email: "author1@illinois.edu",
     ),
     (
-      name: "Corey Withroe",
-      department: [Civil and Environmental Engineering],
+      name: "Author 2",
+      department: [Department 2],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Salem, OR USA],
-      email: "withroe2@illinois.edu",
-    ),
-   (
-      name: "Garret Anderson",
-      department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign],
-      location: [Seattle, WA, USA],
+      location: [Urbana, IL, USA],
       email: "author2@illinois.edu",
     ),
-   (
-      name: "Andrew Farver",
-      department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign],
-      location: [Washington, DC USA],
-      email: "author2@illinois.edu",
-    ),
-
+  ),
   index-terms: ("Optional", "Keywords", "Here"),
   bibliography: bibliography("refs.bib"),
 )
 
-= The Problem of Bridge Scour
+= First Section
 
 To add citations to the report, go to https://scholar.google.com, search for a paper, click on the quotation mark icon below the search result, and copy the BibTeX entry. Then paste it into the `refs.bib` file. You can cite papers using the `@` symbol followed by the citation key, e.g., @lowry1951protein.
 
@@ -47,20 +33,20 @@ Other options to get BibTeX entries for your references include https://www.bibt
 
 More information about citations can be found in the Typst documentation: https://typst.app/docs/reference/model/cite.
 
-= Schoharie Creek Bridge collapse
+== First Subsection
 
 To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
 
 #figure(
-  image("Scour1.png", width: 80%),
+  image("figures/proof-read.png", width: 80%),
   caption: [A humble request. (Copyright: University of the Fraser Valley.)],
 ) <proofread>
 
-=== Schoharie Creek Bridge collapse
+=== First Subsubsection
 
 You can make sub, sub-sub, and sub-sub-sub sections by adding `=` signs in front of the section title. There needs to be a space between the last `=` sign and the title text.
 
-= Dataset Usage
+= Second Section
 
 You can add tables using the `#table` command. Here is an example table:
 
