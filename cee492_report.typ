@@ -33,7 +33,7 @@
   bibliography: bibliography("refs.bib"),
 )
 
-= The Problem of Bridge Scour
+== The Problem of Bridge Scour
 
 To add citations to the report, go to https://scholar.google.com, search for a paper, click on the quotation mark icon below the search result, and copy the BibTeX entry. Then paste it into the `refs.bib` file. You can cite papers using the `@` symbol followed by the citation key, e.g., @lowry1951protein.
 
