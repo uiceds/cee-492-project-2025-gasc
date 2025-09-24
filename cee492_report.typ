@@ -4,7 +4,8 @@
   title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
   abstract: [
     Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States. 
-  authors: (
+  ],
+authors: (
     (
       name: "Garret Anderson",
       department: [Civil and Environmental Engineering],
