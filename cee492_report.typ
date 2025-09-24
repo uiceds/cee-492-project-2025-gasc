@@ -47,7 +47,7 @@ Other options to get BibTeX entries for your references include https://www.bibt
 
 More information about citations can be found in the Typst documentation: https://typst.app/docs/reference/model/cite.
 
-== First Subsection
+== Schoharie Creek Bridge collapse
 
 To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
 
