@@ -7,14 +7,28 @@
   ],
   authors: (
     (
-      name: "Author 1",
+      name: "Garret Anderson",
       department: [Department 1],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
       email: "author1@illinois.edu",
     ),
     (
-      name: "Author 2",
+      name: "Andrew Farver",
+      department: [Department 2],
+      organization: [University of Illinois Urbana-Champaign],
+      location: [Urbana, IL, USA],
+      email: "author2@illinois.edu",
+    ),
+ (
+      name: "Safi Sawadogo",
+      department: [Department 2],
+      organization: [University of Illinois Urbana-Champaign],
+      location: [Urbana, IL, USA],
+      email: "author2@illinois.edu",
+    ),
+ (
+      name: "Corey Withroe",
       department: [Department 2],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
