@@ -54,7 +54,7 @@ To add figures to your report, save the image file in the `figures` folder and u
 #figure(
   image("figures/Scour1.png", width: 100%),
   caption: [Scour at bridge foundation; risk of collapse. (Courtesy: Oregon Department of Transportation.)],
-) <Scour1>
+) <proofread>
 
 === Schoharie Creek Bridge collapse
 
