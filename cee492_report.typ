@@ -20,6 +20,21 @@
       location: [Urbana, IL, USA],
       email: "author2@illinois.edu",
     ),
+  (
+      name: "Author 3",
+      department: [Department 3],
+      organization: [University of Illinois Urbana-Champaign],
+      location: [Urbana, IL, USA],
+      email: "author3@illinois.edu",
+    ),
+    (
+      name: "Author 4",
+      department: [Department 4],
+      organization: [University of Illinois Urbana-Champaign],
+      location: [Urbana, IL, USA],
+      email: "author4@illinois.edu",
+    ),
+
   ),
   index-terms: ("Optional", "Keywords", "Here"),
   bibliography: bibliography("refs.bib"),
