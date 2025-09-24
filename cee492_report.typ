@@ -11,35 +11,35 @@
       department: [Department 1],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
-      email: "author1@illinois.edu",
+      email: "garreta2@illinois.edu",
     ),
     (
       name: "Andrew Farver",
       department: [Department 2],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
-      email: "author2@illinois.edu",
+      email: "farver1@illinois.edu",
     ),
  (
       name: "Safi Sawadogo",
       department: [Department 2],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
-      email: "author2@illinois.edu",
+      email: "safiata2@illinois.edu",
     ),
  (
       name: "Corey Withroe",
       department: [Department 2],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
-      email: "author2@illinois.edu",
+      email: "withroe2@illinois.edu",
     ),
   ),
   index-terms: ("Optional", "Keywords", "Here"),
   bibliography: bibliography("refs.bib"),
 )
 
-= First Section
+= The Problem of Bridge Scour
 
 To add citations to the report, go to https://scholar.google.com, search for a paper, click on the quotation mark icon below the search result, and copy the BibTeX entry. Then paste it into the `refs.bib` file. You can cite papers using the `@` symbol followed by the citation key, e.g., @lowry1951protein.
 
