@@ -34,8 +34,9 @@
       location: [Urbana, IL, USA],
       email: "author4@illinois.edu",
     ),
-
-  ),
+   (  department: [Civil and Environmental Engineering],
+      organization: [University of Illinois Urbana-Champaign],
+	),
   index-terms: ("Optional", "Keywords", "Here"),
   bibliography: bibliography("refs.bib"),
 )
