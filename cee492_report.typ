@@ -35,13 +35,13 @@ authors: (
       email: "withroe2@illinois.edu",
     ),
   ),
-  index-terms: ("Optional", "Keywords", "Here"),
+  index-terms: ("Bridge", "Scour", "Data Science"),
   bibliography: bibliography("refs.bib"),
 )
 
 = The Problem of Bridge Scour
 
-To add citations to the report, go to https://scholar.google.com, search for a paper, click on the quotation mark icon below the search result, and copy the BibTeX entry. Then paste it into the `refs.bib` file. You can cite papers using the `@` symbol followed by the citation key, e.g., @lowry1951protein.
+The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States.  There are complex interactions which drive potential bridge failures. 1-dimensional analysis may provide a preliminary view of scour vulnerability but newer and larger datasets allow for a deeper analysis. 
 
 Other options to get BibTeX entries for your references include https://www.bibtex.com/converters/ and asking ChatGPT to generate the a BibTeX entry for you. (If you use ChatGPT, make sure to verify the generated BibTeX entry for correctness.)
 
@@ -49,8 +49,7 @@ More information about citations can be found in the Typst documentation: https:
 
 == Variables Involved with Scour
 
-To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
-
+Channel slope, cross-sectional area, volumentric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructure.  
 #figure(
   image("figures/Scour1.png", width: 100%),
   caption: [Scour at bridge foundation; risk of collapse. (Courtesy: Oregon Department of Transportation.)],
@@ -58,11 +57,11 @@ To add figures to your report, save the image file in the `figures` folder and u
 
 === Schoharie Creek Bridge collapse
 
-You can make sub, sub-sub, and sub-sub-sub sections by adding `=` signs in front of the section title. There needs to be a space between the last `=` sign and the title text.
+In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment. In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
 
 = Dataset - Water-surface profiles near selected bridge sites
 
-You can add tables using the `#table` command. Here is an example table:
+State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
 
 #figure(
   caption: [Example Table],
