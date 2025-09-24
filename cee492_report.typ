@@ -52,7 +52,7 @@ More information about citations can be found in the Typst documentation: https:
 To add figures to your report, save the image file in the `figures` folder and use the `#figure` command as shown below to include it in your document. You can specify the width of the image and add a caption. Then you can reference the figure like this: @proofread.
 
 #figure(
-  image("figures/proof-read.png", width: 80%),
+  image("Scour1.png", width: 80%),
   caption: [A humble request. (Copyright: University of the Fraser Valley.)],
 ) <proofread>
 
