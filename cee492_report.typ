@@ -1,4 +1,4 @@
-#import "@preview/charged-ieee:0.1.4": ieee
+t#import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
   title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
@@ -10,28 +10,28 @@ authors: (
       name: "Garret Anderson",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      location: [Seattle, WA, USA],
       email: "garreta2@illinois.edu",
     ),
     (
       name: "Andrew Farver",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      location: [Washington, DC, USA],
       email: "farver1@illinois.edu",
     ),
  (
       name: "Safi Sawadogo",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      location: [Tuscon, AZ, USA],
       email: "safiata2@illinois.edu",
     ),
  (
       name: "Corey Withroe",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
-      location: [Urbana, IL, USA],
+      location: [Salem, OR, USA],
       email: "withroe2@illinois.edu",
     ),
   ),
