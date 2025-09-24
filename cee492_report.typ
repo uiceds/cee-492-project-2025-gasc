@@ -86,18 +86,24 @@ The State of Montana has published four datasets regarding hydraulic information
 - Water surface profiles near selected bridge sites
 
 
-You can create numbered lists using numbers followed by a period:
-1. First item
-2. Second item
-  1. Sub item 1
-  2. Sub item 2
-
-
-
 == Equations
+
+Athough there are five types of scour, we will focus on the to main causes, which are governed by emperical equations accordingly
+1. Contraction Scour - Laursen Live Bed or Clear Water Scour Equation
+2. Local Scour
+  1. Pier Scour - The Colorado State University (CSU) Equation
+  2. Abutment Scour - The Frolich Equation
+
+
+
 
 You can create equations using `$` symbols. For example, you can make an inline equation like this $E=m c^2$ or a displayed equation like this:
 
 $ x < y => x gt.eq.not y $ <eq1>
 
 You can reference the equation like this: Eq. @eq1.
+
+#figure(
+  image("figures/Scour2.png", width: 100%),
+  caption: [Temporary fix at severe scour location. (Courtesy: Oregon Department of Transportation.)],
+) <proofread>
