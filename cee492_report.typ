@@ -21,7 +21,7 @@ authors: (
       email: "farver1@illinois.edu",
     ),
  (
-      name: "Safi Sawadogo",
+      name: "Safiata Sawadogo",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
       location: [Tuscon, AZ, USA],
@@ -61,14 +61,70 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
 
 This project intends to evaluate the different aspects of bridge scour, the collected data which contributes to it, and develop descriptive and predictive analytics at many bridge sites.  Finally, we will compare to emperical formulas and reccomend any changes to existing processes.
 #figure(
-  caption: [Bridge Cross-Sectional Profile],
+  caption: [Bridge Cross Section Geometry],
+  table(
+    columns: (auto, auto, auto, auto),
+    table.header([*Northing*], [*Easting*], [*Elevation*], [*Distance*]),
+    "1556480.572", "1167958.24", "3952.34", "0",
+ "1556480.015",	"1167959.133",	"3951.11"	"1.05"
+"1556479.323",	"1167960.241",	"3950.23,"	"2.36",
+"1556476.053",	"1167965.477"	"3949.06",	"8.53",
+"1556474.651",	"1167967.723",	"3948.09",	"11.18",
+"1556473.177",	"1167970.083",	"3946.08",	"13.96",
+
+  ),
+) <table-example>
+
+#figure(
+  caption: [Bridge Channel Cross-Sectional Profile],
   table(
     columns: (auto, auto, auto),
     table.header([*Distance from Abutment*], [*Channel Depth*], [*Below Water Level*]),
     "0.0", "1.2", "No",
     "4.0", "2.4", "No",
+    "8.0", "3.8", "Yes",
+    "12.0", "5.9", "Yes",
+    "18.0", "3.8", "Yes",
+    "22.0", "1.8", "No",
+
   ),
 ) <table-example>
+
+#figure(
+  caption: [Bridge Channel Cross-Sectional Profile],
+  table(
+    columns: (auto, auto, auto, auto, auto),
+    table.header([*Pier*], [*Elevation*], [*Distance*], [*CL*], [*Foundation*]),
+    "P4",	"3313.996",	"63.83",	"68.33",	"Known",
+"P3",	"3313.516",	"136.27",	"140.77",	"Known",
+"P3",	"3307.016",	"136.27",	"140.77",	"Known",
+"P3",	"3307.016",	"145.27",	"140.77",	"Known",
+"P3",	"3313.516",	"145.27", "140.77",	"Known",
+"P3",	"3313.516",	"136.27"	"140.77",	"Known",
+"P2", "3314.016",	"207.96",	"212.46",	"Known",
+"P2",	"3307.516",	"207.96",	"212.46",	"Known",
+"P2",	"3307.516",	"216.96",	"212.46",	"Known",
+
+
+  ),
+) <table-example>
+
+#figure(
+  caption: [Water Surface Profile Profile],
+  table(
+    columns: (auto, auto, auto),
+    table.header([*Northing*], [*Easting*], [*Elevation*]),
+    "1102284.1",	"1913872.63",	"3204.09",
+"1102293.07",	"1913869.11",	"3204.1",
+"1102295.2",	"1913867.71",	"3204.07",
+1102296.49",	"1913868.04",	"3204.03",
+"1102297.12",	"1913868.05",	"3203.98",
+"1102297.7",	"1913868.06", "3203.9",
+
+
+  ),
+) <table-example>
+
 
 == State of Montana Site Data
 
@@ -91,7 +147,7 @@ Additionally, The USGS provides expected flood event water levels by severity:
 
 == Equations
 
-Athough there are five types of scour, we will focus on the two main causes, which are governed by emperical equations accordingly
+Athough there are five types of scour, we will focus on the two main causes, which are governed by empirical equations accordingly
 1. Contraction Scour - Laursen Live Bed or Clear Water Scour Equation
 2. Local Scour
   1. Pier Scour - The Colorado State University (CSU) Equation
