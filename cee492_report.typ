@@ -154,6 +154,7 @@ $ V_c = K_u y_1^(1/6) D_50^(1/2) $
   2. Abutment Scour - The Frolich Equation
   $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a $
 
+To effectively apply the equations, we'll need to make informed assumptions. Since this is a Department of Transportation (DOT) project, our team plans to reference various publicly available DOT sources to make these assumptions. We'll then calculate or estimate variables related to flow velocity, streambed/channel geometry, and pier geometry using the gathered data.
 
 #figure(
   image("figures/Scour2.png", width: 100%),
