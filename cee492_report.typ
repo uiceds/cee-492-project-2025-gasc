@@ -137,7 +137,7 @@ Which includes:
 - Longitudinal streambed profiles along the sides of piers at selected bridge sites
 - Pier structure geometry data for section and side views at seleted bridge sites
   - Pier structure data for section views
-  - pier structure data for side views
+  - Pier structure data for side views
 - Water surface profiles near selected bridge sites
 
 Additionally, The USGS provides expected flood event water levels by severity: 
