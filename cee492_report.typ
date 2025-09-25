@@ -21,7 +21,7 @@
       email: "farver1@illinois.edu",
     ),
  (
-      name: "Safi Sawadogo",
+      name: "Safiata Sawadogo",
       department: [Civil and Environmental Engineering],
       organization: [University of Illinois Urbana-Champaign],
       location: [Urbana, IL, USA],
