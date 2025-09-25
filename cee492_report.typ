@@ -35,7 +35,7 @@ authors: (
       email: "withroe2@illinois.edu",
     ),
   ),
-  index-terms: ("Bridge", "Scour", "Data Science"),
+  index-terms: ("Bridge", "Scour", "Data Science", "Julia"),
   bibliography: bibliography("refs.bib"),
 )
 
@@ -59,7 +59,7 @@ In 1987, the Schorharie Creek Bridge collapse in New York State, which failed du
 
 State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
 
-This project intends to evaluate the different aspects of bridge scour, the collected data which contributes to it, and develop descriptive and predictive analytics at many bridge sites.  Finally, we will compare to emperical formulas and reccomend any changes to existing processes.
+This project intends to use the coding language Julia toevaluate the different aspects of bridge scour, the collected data which contributes to it, and develop descriptive and predictive analytics at many bridge sites.  Finally, we will compare to emperical formulas and reccomend any changes to existing processes.
 #figure(
   caption: [Bridge Cross Section Geometry],
   table(
@@ -133,16 +133,15 @@ The State of Montana has published four datasets regarding hydraulic information
 
 Which includes: 
 
-- Cross Sectional Geometry data at selected bridge sites in Montana
-- Longitudinal streambed profiles along the sides of piers at selected bridge sites
-- Pier structure geometry data for section and side views at seleted bridge sites
+- Cross Sectional Geometry data 
+- Longitudinal streambed profiles along the sides of piers
+- Pier structure geometry data for section and side views
   - Pier structure data for section views
   - Pier structure data for side views
-- Water surface profiles near selected bridge sites
+- Water surface profiles 
 
-Additionally, The USGS provides expected flood event water levels by severity: 
+Additionally, The USGS provides expected flood event water levels by severity: https://streamstats.usgs.gov/ss/ 
 
--  https://streamstats.usgs.gov/ss/
 
 == Equations
 
