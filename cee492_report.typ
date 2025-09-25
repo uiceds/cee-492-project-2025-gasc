@@ -35,7 +35,8 @@ authors: (
       email: "withroe2@illinois.edu",
     ),
   ),
-  index-terms: ("Bridge", "Scour", "Data Science"),
+  
+index-terms: ("Bridge", "Scour", "Data Science"),
   bibliography: bibliography("refs.bib"),
 )
 
