@@ -59,7 +59,7 @@ In 1987, the Schorharie Creek Bridge collapse in New York State, which failed du
 
 State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
 
-This project intends to use the coding language Julia toevaluate the different aspects of bridge scour, the collected data which contributes to it, and develop descriptive and predictive analytics at many bridge sites.  Finally, we will compare to emperical formulas and reccomend any changes to existing processes.
+This project intends to use the coding language Julia to evaluate the different aspects of bridge scour, the collected data which contributes to it, and develop descriptive and predictive analytics at many bridge sites.  Finally, we will compare to emperical formulas and reccomend any changes to existing processes.
 #figure(
   caption: [Bridge Cross Section Geometry],
   table(
@@ -152,7 +152,7 @@ $ V_c = K_u y_1^(1/6) D_50^(1/2) $
   1. Pier Scour - The Colorado State University (CSU) Equation
   $ y_s = 2.0 K_1 K_2 K_3 K_4 a^0.65 y_1^0.35 "Fr"^0.43 $
   2. Abutment Scour - The Frolich Equation
-  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a$
+  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a $
 
 
 #figure(
