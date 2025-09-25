@@ -66,7 +66,7 @@ This project intends to evaluate the different aspects of bridge scour, the coll
     columns: (auto, auto, auto, auto),
     table.header([*Northing*], [*Easting*], [*Elevation*], [*Distance*]),
     "1556480.572", "1167958.24", "3952.34", "0",
- "1556480.015",	"1167959.133",	"3951.11"	"1.05"
+ "1556480.015",	"1167959.133",	"3951.11"	"1.05",
 "1556479.323",	"1167960.241",	"3950.23,"	"2.36",
 "1556476.053",	"1167965.477"	"3949.06",	"8.53",
 "1556474.651",	"1167967.723",	"3948.09",	"11.18",
@@ -104,7 +104,6 @@ This project intends to evaluate the different aspects of bridge scour, the coll
 "P2", "3314.016",	"207.96",	"212.46",	"Known",
 "P2",	"3307.516",	"207.96",	"212.46",	"Known",
 "P2",	"3307.516",	"216.96",	"212.46",	"Known",
-
 
   ),
 ) <table-example>
