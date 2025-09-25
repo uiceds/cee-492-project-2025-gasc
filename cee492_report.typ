@@ -157,3 +157,9 @@ Athough there are five types of scour, we will focus on the two main causes, whi
   image("figures/Scour2.png", width: 100%),
   caption: [Temporary fix at severe scour location. (Courtesy: Oregon Department of Transportation.)],
 ) <proofread>
+
+#figure(
+  image("figures/X_Channel_Profile.png", width: 100%),
+  caption: [Upstream cross-channel profile at bridge.],
+) <proofread>
+
