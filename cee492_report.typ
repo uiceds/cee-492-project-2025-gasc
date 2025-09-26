@@ -59,7 +59,7 @@ In 1987, the Schorharie Creek Bridge collapse in New York State, which failed du
 
 State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
 
-This project intends to use the coding language Julia to evaluate the different aspects of bridge scour, the collected data which contributes to it, and develop descriptive and predictive analytics at many bridge sites.  Finally, we will compare to emperical formulas and reccomend any changes to existing processes.
+This project intends to use the coding language Julia to evaluate the different aspects of bridge scour, the collected data which contributes to it, and develop descriptive and predictive analytics at many bridge sites, including using Julia's image processing to visualize channel and thalweg migration over time.  Finally, we will compare to emperical formulas and reccomend any changes to existing processes.
 #figure(
   caption: [Bridge Cross Section Geometry],
   table(
