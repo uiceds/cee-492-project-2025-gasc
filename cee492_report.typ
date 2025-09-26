@@ -91,7 +91,7 @@ This project intends to use the coding language Julia to evaluate the different 
 ) <table-example>
 
 #figure(
-  caption: [Bridge Channel Cross-Sectional Profile],
+  caption: [Pier Structure Geometry Data],
   table(
     columns: (auto, auto, auto, auto, auto),
     table.header([*Pier*], [*Elevation*], [*Distance*], [*CL*], [*Foundation*]),
