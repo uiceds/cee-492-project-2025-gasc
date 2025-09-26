@@ -133,7 +133,7 @@ The State of Montana has published four datasets regarding hydraulic information
 
 Which includes: 
 
-- Cross Sectional Geometry data 
+- Cross-sectional geometry data 
 - Longitudinal streambed profiles along the sides of piers
 - Pier structure geometry data for section and side views
   - Pier structure data for section views
@@ -145,8 +145,9 @@ Additionally, The USGS provides expected flood event water levels by severity: h
 
 == Equations
 
-Athough there are five types of scour, we will focus on the two main causes, which are governed by empirical equations accordingly
-1. Contraction Scour - Laursen Live Bed or Clear Water Scour Equation
+Athough there are five types of scour, we will focus on the two main causes, which are described by empirical equations accordingly:
+1. Contraction Scour - 
+  1. Laursen Live Bed or Clear Water Scour Equation
 $ V_c = K_u y_1^(1/6) D_50^(1/2) $
 2. Local Scour
   1. Pier Scour - The Colorado State University (CSU) Equation
