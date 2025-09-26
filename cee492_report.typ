@@ -53,7 +53,7 @@ Channel slope, cross-sectional area, volumentric flow rates, contraction geometr
 
 === Schoharie Creek Bridge collapse
 
-In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment. In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
+In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment. In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
 
 = Dataset - Water-surface profiles near selected bridge sites
 
