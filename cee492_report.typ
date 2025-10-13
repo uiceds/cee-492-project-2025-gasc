@@ -167,3 +167,24 @@ To effectively apply the equations, we'll need to make informed assumptions. Sin
   caption: [Upstream cross-channel profile at bridge.],
 ) <proofread>
 
+= Exploratory Data analysis
+(Narrative description and characterization of the dataset interspersed with summary statistics and plots)
+
+= Predictive Modeling
+(A brief plan for the predictive model we plan to create)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
