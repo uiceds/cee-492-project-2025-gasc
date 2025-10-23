@@ -5,8 +5,8 @@
 # ======================================
 
 import Pkg
-Pkg.activate(@__DIR__)    # activate the environment where THIS file lives
-Pkg.instantiate()         # ensure packages are installed
+Pkg.activate(@__DIR__)     # activate the env next to this file
+Pkg.instantiate()          # make sure deps listed in Project/Manifest are installed
 
 # --- Load packages ---
 using CSV
@@ -19,15 +19,10 @@ using LinearAlgebra
 
 #%% PATH SETUP
 
-# Path to the Data folder (relative to this file)
-const DATADIR = joinpath(@__DIR__, "Data")
+const DATADIR = joinpath(@__DIR__, "Data")   # Data folder next to this file
+isdir(DATADIR) || error("Data directory not found: $DATADIR")
 
-# Make sure it exists
-if !isdir(DATADIR)
-    error("Data directory not found: $DATADIR")
-end
-
-println("Data directory confirmed at: ", DATADIR)
+println("Data directory: ", DATADIR)
 println("Files in Data/: ", readdir(DATADIR))
 
 #%% LOAD DATA
