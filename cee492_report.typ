@@ -173,6 +173,15 @@ The research team entered the exploratory data analysis (EDA) phase with the int
 
 With the aforementioned limitations identified, the research team focused attention and efforts on finding a reasonable but potentially impactful way to analyze some of the data on hand. As discussed in the team’s prior submittal, bridge scour is a serious concern for State and Federal entities, leading to thousands and even millions of dollars spent in monitoring costs. The research team thus changed its priority to evaluating if applying data science could help identify and model trends in streambed elevations. If correlations do exist, a reliable model could be produced, having the potential to allow States and the Federal Government to more intelligently determine at what interval monitoring should be conducted, as opposed to standardized (and costly) yearly or bi-yearly.
 
+#figure(
+  caption: [Basic Data Stats],
+  table(
+    columns: (auto, auto,),
+    "Number of Streams",	"16",	
+"Number of Bridges",	"33",	
+"Number of Cross Sections",	"79",	
+"Total Unique Readings",	"102,276",	
+
 With that in mind, the research team has successfully compiled the cross-sectional streambed data provided by the USGS, ranging from 2012 to 2024, into a single dataframe that will be used for the predictive modeling. Thus far, the team has loaded the data into a Pluto workbook, performed initial cleaning, and began simplifying the ability to visualize the data. Figure 5 shows the plots of a sample bridge, with both upstream and downstream surface elevations changing throughout the observed years.
 
 #figure(
