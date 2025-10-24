@@ -182,11 +182,15 @@ With the aforementioned limitations identified, the research team focused attent
 "Number of Cross Sections",	"79",	
 "Total Unique Readings",	"102,276",	
 
+  ),
+) <table-example>
+
+
 With that in mind, the research team has successfully compiled the cross-sectional streambed data provided by the USGS, ranging from 2012 to 2024, into a single dataframe that will be used for the predictive modeling. Thus far, the team has loaded the data into a Pluto workbook, performed initial cleaning, and began simplifying the ability to visualize the data. Figure 5 shows the plots of a sample bridge, with both upstream and downstream surface elevations changing throughout the observed years.
 
 #figure(
   image("figures/Example_Bridge_Plots.png", width: 100%),
-  caption: [Example StreamStats data from UFGS.],
+  caption: [Example Cross Sections Combined and Plotted in Julia.],
 ) <proofread>
 
 = Predictive Modeling
