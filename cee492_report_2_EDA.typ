@@ -1,7 +1,8 @@
 #import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
-  title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
+  title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics
+  #text(size: 0.8em)[Milestone 2: Exploratory Data Analysis]],
   abstract: [
     Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States. With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of Data Science and the Julia programming language in investigating specific bridge sites for that end. 
   ],
@@ -186,8 +187,7 @@ With that in mind, the research team has successfuly conglomerated the cross-sec
 
 = Predictive Modeling
 (A brief plan for the predictive model we plan to create) DELETE WHEN REPORT IS READY
-
-With a more refined and reasonable plan established, the research team plans to begin refining the data further and generating its predictive model. The team is foremost interested in determining if there are noticeable trends in the data. The team will use SVD/PCA to INSERT STUFF HERE. From there, the team plans to develop a model from a select number of bridges and test that model using other bridges. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model using the remaining years. 
+=With a more refined and reasonable plan established, the research team plans to begin refining the data further and generating its predictive model. The team is foremost interested in determining if there are noticeable trends in the data. The team will use SVD/PCA to INSERT STUFF HERE. From there, the team plans to develop a model from a select number of bridges and test that model using other bridges. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model using the remaining years. 
 
 
 
