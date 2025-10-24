@@ -28,13 +28,7 @@ authors: (
       location: [Tuscon, AZ, USA],
       email: "safiata2@illinois.edu",
     ),
- (
-      name: "Corey Withroe",
-      department: [Civil and Environmental Engineering],
-      organization: [University of Illinois Urbana-Champaign],
-      location: [Salem, OR, USA],
-      email: "withroe2@illinois.edu",
-    ),
+
   ),
   index-terms: ("Bridge", "Scour", "Data Science", "Julia"),
   bibliography: bibliography("refs.bib"),
