@@ -185,8 +185,9 @@ With that in mind, the research team has successfuly conglomerated the cross-sec
 ) <proofread>
 
 = Predictive Modeling
-(A brief plan for the predictive model we plan to create)
-With a more refined and reasonable plan established, the research team plans to begin refining the data further and generating its predictive model. 
+(A brief plan for the predictive model we plan to create) DELETE WHEN REPORT IS READY
+
+With a more refined and reasonable plan established, the research team plans to begin refining the data further and generating its predictive model. The team is foremost interested in determining if there are noticeable trends in the data. The team will use SVD/PCA to INSERT STUFF HERE. From there, the team plans to develop a model from a select number of bridges and test that model using other bridges. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model using the remaining years. 
 
 
 
