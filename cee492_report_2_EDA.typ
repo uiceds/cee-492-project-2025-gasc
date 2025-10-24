@@ -168,11 +168,12 @@ To effectively apply the equations, we'll need to make informed assumptions. Sin
 ) <proofread>
 
 == Exploratory Data analysis
-The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings were that the goals of the project were too challenging given the availability, complexity, and format of the needed data. As mentioned in the project introduction submission, the available scour data included numerous different, somewhat indepedent datasets, including cross-sectional geometry data, Longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was simply beyond the scope of this class. For example, in order to try identifying and modeling the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate that bridge on the USGS StreamStats GIS page, hope that there was a stream gauge nearby, and then hope that the stream gauge itself had data that overlapped with the scour/elevation data. That task turned to be far too challening in itself, let alone decomposing complicated stream flow data on top of stream elevation data and trying to correlate. 
+
+The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings were that the goals of the project were too challenging given the availability, complexity, and format of the needed data. As mentioned in the project introduction submission, the available scour data included numerous different, somewhat independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was simply beyond the scope of this class. For example, in order to try identifying and modeling the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate that bridge on the USGS StreamStats GIS page, hope that there was a stream gauge nearby, and then hope that the stream gauge itself had data that overlapped with the scour/elevation data. That task turned to be far too challenging in itself, let alone decomposing complicated stream flow data on top of stream elevation data and trying to correlate. 
 
 #figure(
   image("figures/Example_StreamStats_Data.png", width: 100%),
-  caption: [Example StreamStats data from UFGS.],
+  caption: [Example StreamStats data from USGS.],
 ) <proofread>
 
 With those limitations identified, the research team focused its attention on finding a reasonable but potentially impactful way to analyze some of the data on hand. As discussed in the introductory submission, bridge scour is a serious concern for State and Federal entities, leading to thousands to millions of dollars spent in monitoring costs. The research team thus changed its priority to evaluating if any data science could help identify and model trends in streambed elevations. If correlations do exist a reliable model could be produced, it has the potential to allow States and the Federal Government to more intelligently determine when monitoring should be conducted, as opposed to standardized (and costly) yearly or bi-yearly.
@@ -185,9 +186,11 @@ With that in mind, the research team has successfuly conglomerated the cross-sec
 ) <proofread>
 
 == Predictive Modeling
+
 (A brief plan for the predictive model we plan to create) DELETE WHEN REPORT IS READY
 
 With a more refined and reasonable plan established, the research team plans to begin refining the data further and generating its predictive model. The team is foremost interested in determining if there are noticeable trends in the data. The team will use SVD/PCA to INSERT STUFF HERE. From there, the team plans to develop a model from a select number of bridges and test that model using other bridges. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model using the remaining years. 
+
 
 
 
