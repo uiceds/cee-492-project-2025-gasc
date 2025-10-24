@@ -1,7 +1,8 @@
 #import "@preview/charged-ieee:0.1.4": ieee
 
 #show: ieee.with(
-  title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics],
+  title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics
+  #text(size: 0.8em)[Milestone 2: Exploratory Data Analysis]],
   abstract: [
     Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States. With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of Data Science and the Julia programming language in investigating specific bridge sites for that end. 
   ],
@@ -45,7 +46,7 @@ The load paths of bridges eventually lead to the Earth and the soil or rock with
 
 == Variables Involved with Scour
 
-Channel slope, cross-sectional area, volumentric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
+Channel slope, cross-sectional area, volumetric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
 #figure(
   image("figures/Scour1.png", width: 100%),
   caption: [Scour at bridge foundation; risk of collapse. (Courtesy: Oregon Department of Transportation.)],
@@ -55,7 +56,7 @@ Channel slope, cross-sectional area, volumentric flow rates, contraction geometr
 
 In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment. In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
 
-= Dataset - Water-surface profiles near selected bridge sites
+= Dataset - "Bridge scour data at selected bridge sites in Montana"
 
 State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
 
@@ -167,24 +168,26 @@ To effectively apply the equations, we'll need to make informed assumptions. Sin
   caption: [Upstream cross-channel profile at bridge.],
 ) <proofread>
 
-= Exploratory Data analysis
-(Narrative description and characterization of the dataset interspersed with summary statistics and plots)
+= Exploratory Data Analysis
+
+The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the goals of the project set forth in the first submittal (i.e. the preceding paragraphs) were reasoned to be too challenging given the availability, complexity, and format of the necessary data. As mentioned in our prior submittal, the available scour data included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of this class. To give example, in order to try identifying and model the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate the subject bridge on the USGS StreamStats GIS page, investigate if there was a stream gauge measuring data in close proximity, and if that were true then hope that the dates on the stream gauge data coincided with the data collected on scour/elevation. It was determined by the research team that the described task would be far too challenging in itself, let alone decomposing and cleaning/tidying the complicated stream flow data in addition to the stream elevation data.
+
+#figure(
+  image("figures/Example_StreamStats_Data.png", width: 100%),
+  caption: [Example StreamStats data from USGS.],
+) <proofread>
+
+With the aforementioned limitations identified, the research team focused attention and efforts on finding a reasonable but potentially impactful way to analyze some of the data on hand. As discussed in the team’s prior submittal, bridge scour is a serious concern for State and Federal entities, leading to thousands and even millions of dollars spent in monitoring costs. The research team thus changed its priority to evaluating if applying data science could help identify and model trends in streambed elevations. If correlations do exist, a reliable model could be produced, having the potential to allow States and the Federal Government to more intelligently determine at what interval monitoring should be conducted, as opposed to standardized (and costly) yearly or bi-yearly.
+
+With that in mind, the research team has successfully compiled the cross-sectional streambed data provided by the USGS, ranging from 2012 to 2024, into a single dataframe that will be used for the predictive modeling. Thus far, the team has loaded the data into a Pluto workbook, performed initial cleaning, and began simplifying the ability to visualize the data. Figure 5 shows the plots of a sample bridge, with both upstream and downstream surface elevations changing throughout the observed years.
+
+#figure(
+  image("figures/Example_Bridge_Plots.png", width: 100%),
+  caption: [Example StreamStats data from UFGS.],
+) <proofread>
 
 = Predictive Modeling
-(A brief plan for the predictive model we plan to create)
 
+With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team is foremost interested in determining if there are noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team believes that SVD and PCA may be able to provide insights into the underlying trends within the streambed data. The use of SVD and PCA would require the data to be reformatted. The restructuring will involve transitioning the current data frame, which is a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that is suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team believes that the first and second modes of the PCA/SVD analyses will provide the most useful information. The first mode will capture the overall summation of cut and fill across the stream bed, while the second mode will focus more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they can be correlated with the known pier coordinates at each bridge location.   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+To develop a predictive model, the question of whether to use the entire stream bed cross section in the model or whether to focus on the known pier locations is currently unanswered. This is mostly due to the fact that the previously mentioned SVD/PCA analyses have not been conducted. Following these analyses, our team believes that the path forward in developing our model will be more definite. Given the extent of the data frame the team believes that selecting a number of bridges, most likely those that reside on the same stream, may be a way to simplify the problem. Choosing a river with the most abundant and high quality data for this task will be crucial. Some preliminary analysis has been done and shows that the Bitterroot river has three unique structures that have all been observed more than five years. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model by comparing to the estimated elevation to that of the known elevation in the remaining years data.
