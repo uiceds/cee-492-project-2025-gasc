@@ -2,7 +2,7 @@
 
 #show: ieee.with(
   title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics
-  #text(size: 0.85em, style: "italic")[Submission 2: Exploratory Data Analysis]],
+  #text(size: 0.85em, style: "italic")[Submission 3: Preliminary Predictive Modeling]],
   abstract: [
     Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States. With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of Data Science and the Julia programming language in investigating specific bridge sites for that end. 
   ],
