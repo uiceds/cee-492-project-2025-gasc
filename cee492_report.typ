@@ -191,7 +191,7 @@ With that in mind, the research team has successfully compiled the cross-section
 Both presentations of the streambed elevations across overserved years are seen as beneficial to the project team. The Figure 5 presentation allows the observer to account for overall varifation of the dataset. Contrastingly, the presentation presented in Figure 6 allows, as previously discussed, the obersever to account for cuts, fills, or balances in the overall streambed across observed years. In the project team’s opinion, the characterization of the streambed year to year as a cut, fill, or balance is seen as the most holistic take on the comparison of streambed profiles. The profiles presented in Figure 6 have been normalized following recommendations provided to the project team. This normalization allows for comparison between profiles at different structures.  
 
 #figure(
-  image("figures/Example_Bridge_Plots.png", width: 100%),
+  image("figures/Figure 5.png", width: 100%),
   caption: [Example Cross Sections Combined and Plotted in Julia.],
 ) <proofread>
 
