@@ -202,18 +202,21 @@ Both presentations of the streambed elevations across overserved years are seen 
 
 = Initial Predictive Modeling Strategy
 
-With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team is foremost interested in determining if there are noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team believes that SVD and PCA may be able to provide insights into the underlying trends within the streambed data. The use of SVD and PCA would require the data to be reformatted. The restructuring will involve transitioning the current data frame, which is a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that is suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team believes that the first and second modes of the PCA/SVD analyses will provide the most useful information. The first mode will capture the overall summation of cut and fill across the stream bed, while the second mode will focus more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they can be correlated with the known pier coordinates at each bridge location. Figure 7 below shows the two modes presented in the code.
-
-#figure(
-  image("figures/Figure 7.png", width: 100%),
-  caption: [SVD Modes 1 & 2 for Subject Bridge Structure],
-) <proofread>
+With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team is foremost interested in determining if there are noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team believes that SVD and PCA may be able to provide insights into the underlying trends within the streambed data. The use of SVD and PCA would require the data to be reformatted. The restructuring will involve transitioning the current data frame, which is a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that is suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team believes that the first and second modes of the PCA/SVD analyses will provide the most useful information. The first mode will capture the overall summation of cut and fill across the stream bed, while the second mode will focus more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they can be correlated with the known pier coordinates at each bridge location.
 
 To develop a predictive model, the question of whether to use the entire stream bed cross section in the model or whether to focus on the known pier locations is currently unanswered. This is mostly due to the fact that the previously mentioned SVD/PCA analyses have not been conducted. Following these analyses, our team believes that the path forward in developing our model will be more definite. Given the extent of the data frame the team believes that selecting a number of bridges, most likely those that reside on the same stream, may be a way to simplify the problem. Choosing a river with the most abundant and high quality data for this task will be crucial. Some preliminary analysis has been done and shows that the Bitterroot river has three unique structures that have all been observed more than five years. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model by comparing to the estimated elevation to that of the known elevation in the remaining years data.
 
 = Predictive Modeling
 
 == Methods
+As discussed in the preceding section, the USGS data required reformatting in order to perform SVD/PCA. This was completed by the group and the aforementioned modes of the SVD/PCA were able to be readily observed. Figure 7 below shows the two modes presented in the code.
+
+#figure(
+  image("figures/Figure 7.png", width: 100%),
+  caption: [SVD Modes 1 & 2 for Subject Bridge Structure],
+) <proofread>
+
+Following this, training data was created for the predictive model. The stream bed profiles exhibit significant variability (or 'noise'), as seen for the 2023 data in Figure 5. This high variability, combined with the fact that adjacent elevation points are highly correlated, could cause a standard model to overfit the data. Therefore, a regularized multiple linear regression model was chosen. The project team used the regularization parameter to prevent overfitting of the data. This was believed to produce a more stable and robust prediction.
 
 == Results
 
