@@ -216,8 +216,32 @@ As discussed in the preceding section, the USGS data required reformatting in or
   caption: [SVD Modes 1 & 2 for Subject Bridge Structure],
 ) <proofread>
 
-Following this, training data was created for the predictive model. The stream bed profiles exhibit significant variability (or 'noise'), as seen for the 2023 data in Figure 5. This high variability, combined with the fact that adjacent elevation points are highly correlated, could cause a standard model to overfit the data. Therefore, a regularized multiple linear regression model was chosen. The project team used the regularization parameter to prevent overfitting of the data. This was believed to produce a more stable and robust prediction.
+Following this, training data was then able to be created foe the prospective predictive model. Most of the stream bed profiles investigated by the project team exhibited significant variability (or 'noise'), as seen for the 2023 data in Figure 5. This high variability, combined with the fact that adjacent elevation points are highly correlated, could cause a standard model to overfit the data. Therefore, a regularized multiple linear regression model was chosen. The project team used the regularization parameter to prevent overfitting of the data. This was believed to produce a more stable and robust prediction. For this submission, the model was used to predict the last observed year for a given bridge structure.
 
 == Results
+In order to produce meaningful results, a user-friendly interface needed to be created in the Pluto notebook interface. Through the use of drop-down menus and various graphs, like those presented in figures 5-7, understanding the data, along with the results, was made possible. Figure 8 shows the resulting plot in which the predicted profile for the last year is superimposed on the actual profile for that same year. 
 
+#figure(
+  image("figures/Figure 8.png", width: 100%),
+  caption: [Last Observed Year: Actual v. Predicted Profile],
+) <proofread>
+
+It can be seen in Figure 8 that the predicted profile is in relatively good agreement with the actual profile. To make this observation more quantitative, the project team worked on applying accuracy metrics to the data. The project team chose to use the coefficient of determination (COD), more familiarly known as R^2, along with Root Mean Squared Error (RMSE) to gauge the accuracy of the model.
+For this submission, the scope of analysis was limited to three bridges on the same river, the Bitterroot. These structures include: P00007 043+0.666, S00373000+04001, S00370 000+0.5361. Both the upstream and downstream data were analyzed for these structures. Predictions made for the final observed year’s profile were made and the accuracy metrics were recorded. The results can be seen in the following table, Table  6.
+
+#figure(
+  caption: [Predictive Model Results],
+  table(
+    columns: (auto, auto, auto, auto, auto),
+    table.header([*Structure*], [*Side*], [*R^2*], [*RMSE (ft)*],
+ "P00007 043+0.666", "Upstream", "0.68", "2.0",
+"P00007 043+0.666", "Downstream", "0.90", "1.9",
+"S00373000+04001", "Upstream", "0.74", "1.3",
+"S00373000+04001", "Downstream", "0.88", "1.5",
+"S00370 000+0.5361", "Upstream", "0.55", "2.2",
+"S00370 000+0.5361", "Downstream", "0.56", "2.4"
+  ),
+) <table-example>
+
+Discussion on table results
 == Next Steps
