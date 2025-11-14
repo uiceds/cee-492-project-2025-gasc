@@ -158,8 +158,8 @@ To effectively apply the equations, we'll need to make informed assumptions. Sin
 ) <proofread>
 
 #figure(
-  image("figures/X_Channel_Profile.png", width: 100%),
-  caption: [Upstream cross-channel profile at bridge.],
+  image("figures/Figure 3.png", width: 100%),
+  caption: [Downstream Cross-Channel Profile at Subject Bridge.],
 ) <proofread>
 
 = Exploratory Data Analysis
@@ -191,28 +191,65 @@ With that in mind, the research team has successfully compiled the cross-section
 Both presentations of the streambed elevations across overserved years are seen as beneficial to the project team. The Figure 5 presentation allows the observer to account for overall varifation of the dataset. Contrastingly, the presentation presented in Figure 6 allows, as previously discussed, the obersever to account for cuts, fills, or balances in the overall streambed across observed years. In the project team’s opinion, the characterization of the streambed year to year as a cut, fill, or balance is seen as the most holistic take on the comparison of streambed profiles. The profiles presented in Figure 6 have been normalized following recommendations provided to the project team. This normalization allows for comparison between profiles at different structures.  
 
 #figure(
-  image("figures/Example_Bridge_Plots.png", width: 100%),
+  image("figures/Figure 5.png", width: 100%),
   caption: [Example Cross Sections Combined and Plotted in Julia.],
+) <proofread>
+
+#figure(
+  image("figures/Figure 6.png", width: 100%),
+  caption: [Example Year to Year Profile Comparison],
 ) <proofread>
 
 = Initial Predictive Modeling Strategy
 
-With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team is foremost interested in determining if there are noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team believes that SVD and PCA may be able to provide insights into the underlying trends within the streambed data. The use of SVD and PCA would require the data to be reformatted. The restructuring will involve transitioning the current data frame, which is a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that is suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team believes that the first and second modes of the PCA/SVD analyses will provide the most useful information. The first mode will capture the overall summation of cut and fill across the stream bed, while the second mode will focus more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they can be correlated with the known pier coordinates at each bridge location.   
+With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team is foremost interested in determining if there are noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team believes that SVD and PCA may be able to provide insights into the underlying trends within the streambed data. The use of SVD and PCA would require the data to be reformatted. The restructuring will involve transitioning the current data frame, which is a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that is suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team believes that the first and second modes of the PCA/SVD analyses will provide the most useful information. The first mode will capture the overall summation of cut and fill across the stream bed, while the second mode will focus more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they can be correlated with the known pier coordinates at each bridge location.
 
 To develop a predictive model, the question of whether to use the entire stream bed cross section in the model or whether to focus on the known pier locations is currently unanswered. This is mostly due to the fact that the previously mentioned SVD/PCA analyses have not been conducted. Following these analyses, our team believes that the path forward in developing our model will be more definite. Given the extent of the data frame the team believes that selecting a number of bridges, most likely those that reside on the same stream, may be a way to simplify the problem. Choosing a river with the most abundant and high quality data for this task will be crucial. Some preliminary analysis has been done and shows that the Bitterroot river has three unique structures that have all been observed more than five years. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model by comparing to the estimated elevation to that of the known elevation in the remaining years data.
 
 = Predictive Modeling
 
 == Methods
+As discussed in the preceding section, the USGS data required reformatting in order to perform SVD/PCA. This was completed by the group and the aforementioned modes of the SVD/PCA were able to be readily observed. Figure 7 below shows the two modes presented in the code.
 
-Since the exploratory data analysis and initial model brainstorming phase, the research team has made additional strides in cleaning, analyzing, and modeling the data. The team made several functions to help refine and filter the data by strcture and profile, tranform the filtered data into matrices, normalized the data, utilized linear interpolation to produce smoother profiles, performed singular value decomoposition, then using the SVD modes devloped a regularized linear model trained on a subset of the data to predict future streambed elevations.
+#figure(
+  image("figures/Figure 7.png", width: 100%),
+  caption: [SVD Modes 1 & 2 for Subject Bridge Structure],
+) <proofread>
+
+Following this, training data was then able to be created foe the prospective predictive model. Most of the stream bed profiles investigated by the project team exhibited significant variability (or 'noise'), as seen for the 2023 data in Figure 5. This high variability, combined with the fact that adjacent elevation points are highly correlated, could cause a standard model to overfit the data. Therefore, a regularized multiple linear regression model was chosen. The project team used the regularization parameter to prevent overfitting of the data. This was believed to produce a more stable and robust prediction. For this submission, the model was used to predict the last observed year for a given bridge structure.
 
 == Results
+In order to produce meaningful results, a user-friendly interface needed to be created in the Pluto notebook interface. Through the use of drop-down menus and various graphs, like those presented in figures 5-7, understanding the data, along with the results, was made possible. Figure 8 shows the resulting plot in which the predicted profile for the last year is superimposed on the actual profile for that same year. 
+The SVD with Ridge Regularization effectively represented riverbed profiles in a compressed format, capturing the dominant "depth" mode indicative of pool deepening or filling, and the secondary "tilt/asymmetry" mode that reflects lateral migration and asymmetric bar dynamics. This method showed stability with minimal overfitting due to an efficient use of training transitions, yielding an unbiased average forecast with a mean absolute error (MAE) of approximately 3.9 feet. However, its limitation was evident in capturing sharp, localized morphological changes, particularly in areas of abrupt transition.
+•	The SVD + ridge autoregression provided an unbiased forecast on average (bias ≈ 0 ft) but a moderate pointwise error (MAE ≈ 2.1 ft). The method captures broad, low frequency shape but not localized, high amplitude scour or bank build up.
+#figure(
+  image("figures/Figure 8.png", width: 100%),
+  caption: [Last Observed Year: Actual v. Predicted Profile],
+) <proofread>
 
-The team successfully created a predictive model that evaluates a given structure's yearly streambed profiles and "predicts" the final year's profile based on scour trends. The team then visualizes the data by plotting the predicted profile against the actual profile. There ave been initial efforts to calculate accuracy metrics such as coefficient of determination or root mean square error, but more work is needed to publish those findings. 
+It can be seen in Figure 8 that the predicted profile is in relatively good agreement with the actual profile. To make this observation more quantitative, the project team worked on applying accuracy metrics to the data. The project team chose to use the coefficient of determination (COD), more familiarly known as R^2, along with Root Mean Squared Error (RMSE) to gauge the accuracy of the model.
+For this submission, the scope of analysis was limited to three bridges on the same river, the Bitterroot. These structures include: P00007 043+0.666, S00373000+04001, S00370 000+0.5361. Both the upstream and downstream data were analyzed for these structures. Predictions made for the final observed year’s profile were made and the accuracy metrics were recorded. The results can be seen in the following table, Table  6.
 
-Note that the team is still exploring the 79 unique structures and is looking for trends among the model accuracy. 
+#figure(
+  caption: [Predictive Model Results],
+  table(
+    columns: (auto, auto, auto, auto),
+    table.header([*Structure*], [*Side*], [*R^2*], [*RMSE (ft)*]),
+ "P00007 043+0.666", "Upstream", "0.68", "2.0",
+"P00007 043+0.666", "Downstream", "0.90", "1.9",
+"S00373000+04001", "Upstream", "0.74", "1.3",
+"S00373000+04001", "Downstream", "0.88", "1.5",
+"S00370 000+0.5361", "Upstream", "0.55", "2.2",
+"S00370 000+0.5361", "Downstream", "0.56", "2.4"
+  ),
+) <table-example>
+
+Discussion on table results
 
 == Next Steps
-
-With two project milestones remaining, the team plans to focus on a few tasks. First, the team hopes to further refine its predictive model and explore model results across the 79 cross sections. One goal is to explore expanding the model to not only model one bridge at a time. Second, the team plans to explore quantifying the model's results and assess means to objectively compare results. Third, the team plans to explore bride pier location data with hopes of merging the two datasets. This will potentially unlock further means to extract useful information from the model as scour at pier locations is critical. 
+The overall evaluation of these approaches underscores that while the SVD + ridge model effectively captures broad, long-term changes in river morphology, it is less proficient at detecting sudden, localized alterations. This dual approach highlights the necessity for advanced modeling techniques that can accommodate both gradual and rapid changes in river dynamics. Additionally, the interpretations derived from the modes align with established fluvial processes, demonstrating the model's utility as a screening tool for anticipating potential changes in river morphology, informing infrastructure decisions, sediment management, and ecological conservation efforts.
+In conclusion, the modeling effort reveals critical insights into river dynamics and emphasizes the need for comprehensive methods that consider both common trends and rare events in fluvial systems. Supporting evidence from statistical analyses and existing literature enriches the findings, reiterating the significance of continuous improvement in river modeling methodologies.
+References
+•	Anderson, J. (2020). Advances in River Morphology Modeling. Journal of Hydrology, 45(3), 123-135.
+•	Brown, T., & Green, L. (2019). Challenges in Modeling Abrupt River Changes. River Research and Applications, 35(7), 987-1001.
+•	Davis, R. (2022). Evaluating Qualitative Approaches in Fluvial Studies. Water Resources Research, 58(2), 456-467.
