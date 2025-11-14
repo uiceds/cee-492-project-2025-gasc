@@ -205,6 +205,14 @@ To develop a predictive model, the question of whether to use the entire stream 
 
 == Methods
 
+Since the exploratory data analysis and initial model brainstorming phase, the research team has made additional strides in cleaning, analyzing, and modeling the data. The team made several functions to help refine and filter the data by strcture and profile, tranform the filtered data into matrices, normalized the data, utilized linear interpolation to produce smoother profiles, performed singular value decomoposition, then using the SVD modes devloped a regularized linear model trained on a subset of the data to predict future streambed elevations.
+
 == Results
 
+The team successfully created a predictive model that evaluates a given structure's yearly streambed profiles and "predicts" the final year's profile based on scour trends. The team then visualizes the data by plotting the predicted profile against the actual profile. There ave been initial efforts to calculate accuracy metrics such as coefficient of determination or root mean square error, but more work is needed to publish those findings. 
+
+Note that the team is still exploring the 79 unique structures and is looking for trends among the model accuracy. 
+
 == Next Steps
+
+With two project milestones remaining, the team plans to focus on a few tasks. First, the team hopes to further refine its predictive model and explore model results across the 79 cross sections. One goal is to explore expanding the model to not only model one bridge at a time. Second, the team plans to explore quantifying the model's results and assess means to objectively compare results. Third, the team plans to explore bride pier location data with hopes of merging the two datasets. This will potentially unlock further means to extract useful information from the model as scour at pier locations is critical. 
