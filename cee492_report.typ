@@ -232,7 +232,7 @@ For this submission, the scope of analysis was limited to three bridges on the s
 #figure(
   caption: [Predictive Model Results],
   table(
-    columns: (auto, auto, auto, auto, auto),
+    columns: (auto, auto, auto, auto),
     table.header([*Structure*], [*Side*], [*R^2*], [*RMSE (ft)*],
  "P00007 043+0.666", "Upstream", "0.68", "2.0",
 "P00007 043+0.666", "Downstream", "0.90", "1.9",
