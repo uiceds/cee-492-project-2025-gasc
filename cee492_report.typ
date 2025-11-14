@@ -220,7 +220,7 @@ Following this, training data was then able to be created foe the prospective pr
 
 == Results
 In order to produce meaningful results, a user-friendly interface needed to be created in the Pluto notebook interface. Through the use of drop-down menus and various graphs, like those presented in figures 5-7, understanding the data, along with the results, was made possible. Figure 8 shows the resulting plot in which the predicted profile for the last year is superimposed on the actual profile for that same year. 
-
+The SVD with Ridge Regularization effectively represented riverbed profiles in a compressed format, capturing the dominant "depth" mode indicative of pool deepening or filling, and the secondary "tilt/asymmetry" mode that reflects lateral migration and asymmetric bar dynamics. This method showed stability with minimal overfitting due to an efficient use of training transitions, yielding an unbiased average forecast with a mean absolute error (MAE) of approximately 3.9 feet. However, its limitation was evident in capturing sharp, localized morphological changes, particularly in areas of abrupt transition.
 #figure(
   image("figures/Figure 8.png", width: 100%),
   caption: [Last Observed Year: Actual v. Predicted Profile],
