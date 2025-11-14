@@ -249,7 +249,3 @@ Discussion on table results
 == Next Steps
 The overall evaluation of these approaches underscores that while the SVD + ridge model effectively captures broad, long-term changes in river morphology, it is less proficient at detecting sudden, localized alterations. This dual approach highlights the necessity for advanced modeling techniques that can accommodate both gradual and rapid changes in river dynamics. Additionally, the interpretations derived from the modes align with established fluvial processes, demonstrating the model's utility as a screening tool for anticipating potential changes in river morphology, informing infrastructure decisions, sediment management, and ecological conservation efforts.
 In conclusion, the modeling effort reveals critical insights into river dynamics and emphasizes the need for comprehensive methods that consider both common trends and rare events in fluvial systems. Supporting evidence from statistical analyses and existing literature enriches the findings, reiterating the significance of continuous improvement in river modeling methodologies.
-References
-•	Anderson, J. (2020). Advances in River Morphology Modeling. Journal of Hydrology, 45(3), 123-135.
-•	Brown, T., & Green, L. (2019). Challenges in Modeling Abrupt River Changes. River Research and Applications, 35(7), 987-1001.
-•	Davis, R. (2022). Evaluating Qualitative Approaches in Fluvial Studies. Water Resources Research, 58(2), 456-467.
