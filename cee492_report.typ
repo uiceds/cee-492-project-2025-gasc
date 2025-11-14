@@ -158,8 +158,8 @@ To effectively apply the equations, we'll need to make informed assumptions. Sin
 ) <proofread>
 
 #figure(
-  image("figures/X_Channel_Profile.png", width: 100%),
-  caption: [Upstream cross-channel profile at bridge.],
+  image("figures/Figure 3.png", width: 100%),
+  caption: [Downstream Cross-Channel Profile at Subject Bridge.],
 ) <proofread>
 
 = Exploratory Data Analysis
