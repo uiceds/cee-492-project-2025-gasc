@@ -195,6 +195,11 @@ Both presentations of the streambed elevations across overserved years are seen 
   caption: [Example Cross Sections Combined and Plotted in Julia.],
 ) <proofread>
 
+#figure(
+  image("figures/Figure 6.png", width: 100%),
+  caption: [Example Year to Year Profile Comparison],
+) <proofread>
+
 = Initial Predictive Modeling Strategy
 
 With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team is foremost interested in determining if there are noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team believes that SVD and PCA may be able to provide insights into the underlying trends within the streambed data. The use of SVD and PCA would require the data to be reformatted. The restructuring will involve transitioning the current data frame, which is a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that is suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team believes that the first and second modes of the PCA/SVD analyses will provide the most useful information. The first mode will capture the overall summation of cut and fill across the stream bed, while the second mode will focus more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they can be correlated with the known pier coordinates at each bridge location.   
