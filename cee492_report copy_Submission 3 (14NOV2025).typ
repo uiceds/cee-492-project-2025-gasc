@@ -2,9 +2,9 @@
 
 #show: ieee.with(
   title: [CEE 492 Group Project: The Data Science of Bridge Scour - Diagnostic and Predictive Analytics
-  #text(size: 0.85em, style: "italic")[Submission 4: Final Report Rough Draft]],
+  #text(size: 0.85em, style: "italic")[Submission 3: Preliminary Predictive Modeling]],
   abstract: [
-    Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States. With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of data science and the Julia programming language in investigating stream cross-sectinal data at various Montana bridges in order to gain insights into scour behavior. 
+    Bridge scour (the unwanted removal of sediment at bridge foundations) is the leading cause of bridge failures and closures in the United States. With increasing availability and processing power of stream and weather data, engineers can make efforts to analyze, predict and prescribe patterns to anticipate problems, react quickly to large weather events and design mitigations to preserve and protect these large public assets.   In this study, we will apply the principles of Data Science and the Julia programming language in investigating specific bridge sites for that end. 
   ],
 authors: (
     (
@@ -34,11 +34,7 @@ authors: (
   bibliography: bibliography("refs.bib"),
 )
 
-= Introduction
-
-(SECTION SHOULD ADDRESS: What is the research question or hypothesis you are exploring, and why? What work has previously been done by others in this area? A key part of this section is to explain the motivation behind your analysis.)
-
-== The Problem of Bridge Scour
+= The Problem of Bridge Scour
 
 The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone to be the cause of collapse of 20-100 bridges per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. 1-dimensional analysis may provide a preliminary view of scour vulnerability but newer and larger datasets allow for a deeper analysis. 
 
@@ -54,7 +50,7 @@ Channel slope, cross-sectional area, volumetric flow rates, contraction geometry
 
 In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment. In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
 
-== Dataset - "Bridge scour data at selected bridge sites in Montana"
+= Dataset - "Bridge scour data at selected bridge sites in Montana"
 
 State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
 
@@ -141,6 +137,21 @@ Which includes:
 
 Additionally, The USGS provides expected flood event water levels by severity: https://streamstats.usgs.gov/ss/ 
 
+
+== Equations
+
+Athough there are five types of scour, we will focus on the two main causes, which are described by empirical equations accordingly:
+1. Contraction Scour - 
+  1. Laursen Live Bed or Clear Water Scour Equation
+$ V_c = K_u y_1^(1/6) D_50^(1/2) $
+2. Local Scour
+  1. Pier Scour - The Colorado State University (CSU) Equation
+  $ y_s = 2.0 K_1 K_2 K_3 K_4 a^0.65 y_1^0.35 "Fr"^0.43 $
+  2. Abutment Scour - The Frolich Equation
+  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a $
+
+To effectively apply the equations, we'll need to make informed assumptions. Since this is a Department of Transportation (DOT) project, our team plans to reference various publicly available DOT sources to make these assumptions. We'll then calculate or estimate variables related to flow velocity, streambed/channel geometry, and pier geometry using the gathered data.
+
 #figure(
   image("figures/Scour2.png", width: 100%),
   caption: [Temporary fix at severe scour location. (Courtesy: Oregon Department of Transportation.)],
@@ -151,9 +162,7 @@ Additionally, The USGS provides expected flood event water levels by severity: h
   caption: [Downstream Cross-Channel Profile at Subject Bridge.],
 ) <proofread>
 
-= Exploratory Analysis
-
-(SECTION SHOULD ADDRESS: What data are you using for your analysis, and what are its characteristics? Tell the story of your data as it relates to the problem you are solving or question you are answering.)
+= Exploratory Data Analysis
 
 The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the goals of the project set forth in the first submittal (i.e. the preceding paragraphs) were reasoned to be too challenging given the availability, complexity, and format of the necessary data. As mentioned in our prior submittal, the available scour data included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of this class. To give example, in order to try identifying and model the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate the subject bridge on the USGS StreamStats GIS page, investigate if there was a stream gauge measuring data in close proximity, and if that were true then hope that the dates on the stream gauge data coincided with the data collected on scour/elevation. It was determined by the research team that the described task would be far too challenging in itself, let alone decomposing and cleaning/tidying the complicated stream flow data in addition to the stream elevation data. 
 
@@ -191,17 +200,13 @@ Both presentations of the streambed elevations across overserved years are seen 
   caption: [Example Year to Year Profile Comparison],
 ) <proofread>
 
-= Predictive Modeling
-
-(SECTION SHOULD ADDRESS: What predictive modeling did you do, and what conclusions can you draw from it?)
-
-== Initial Predictive Modeling Strategy
-
-(COPIED FROM PREVIOUS SUBMISSION AND SECTION, FINAL "PREDICTIVE MODELING" SECTION SHOULD BRIEFLY TOUCH ON INITIAL STRATEGY (IF APPLICABLE) BUT PRIMARILY FOCUS ON WHAT OUR ACTUAL MODELING EFFORTS WERE.)
+= Initial Predictive Modeling Strategy
 
 With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team is foremost interested in determining if there are noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team believes that SVD and PCA may be able to provide insights into the underlying trends within the streambed data. The use of SVD and PCA would require the data to be reformatted. The restructuring will involve transitioning the current data frame, which is a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that is suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team believes that the first and second modes of the PCA/SVD analyses will provide the most useful information. The first mode will capture the overall summation of cut and fill across the stream bed, while the second mode will focus more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they can be correlated with the known pier coordinates at each bridge location.
 
 To develop a predictive model, the question of whether to use the entire stream bed cross section in the model or whether to focus on the known pier locations is currently unanswered. This is mostly due to the fact that the previously mentioned SVD/PCA analyses have not been conducted. Following these analyses, our team believes that the path forward in developing our model will be more definite. Given the extent of the data frame the team believes that selecting a number of bridges, most likely those that reside on the same stream, may be a way to simplify the problem. Choosing a river with the most abundant and high quality data for this task will be crucial. Some preliminary analysis has been done and shows that the Bitterroot river has three unique structures that have all been observed more than five years. The team may also develop a model for a single bridge over a partial span of its data (2012-2020 for example) and then test the legitimacy of the model by comparing to the estimated elevation to that of the known elevation in the remaining years data.
+
+= Predictive Modeling
 
 == Methods
 As discussed in the preceding section, the USGS data required reformatting in order to perform SVD/PCA. This was completed by the group and the aforementioned modes of the SVD/PCA were able to be readily observed. Figure 7 below shows the two modes presented in the code.
@@ -243,32 +248,10 @@ From the results presented in the above table and by referencing the respective 
 
 While the R^2 value differed per structure, something that remained relatively consistent was the RMSE for all observation made. The column in table 6 is reported in feet and represents the magnitude of inaccuracy between the predicted and actual profile at any given point. 
 
-== Conclusions
-In conclusion, the modeling effort to date reveals critical insights into river dynamics and emphasizes the need for comprehensive methods that consider both common trends and rare events in fluvial systems. Supporting evidence from statistical analyses and ongoing literature review enriches the findings, reiterating the significance of continuous improvement in river modeling methodologies.
-
-= Discussion
-
-(SECTION SHOULD ADDRESS: Were you able to answer your research question or support/refute your hypothesis? If not, why not? What would be your next steps if you were to continue this line of inquiry after the semester is over? (There can always be next steps, regardless of whether you have been able to answer your question or not.))
-
 == Next Steps
-
-(COPIED FROM PREVIOUS SECTION, NEEDS EDITING)
 The project team noticed some areas which could be improved for the final report. First, the use of the R^2 and RSME as accuracy metrics seems useful, but could be supported by overall area comparisons. These comparsions could be made between the final year prediction vs actual, but are thought to be more insightful if the second to last year is compared to both the the actual final year profile along with the predicted final year profile. A cut, fill, or balance (values close to zero) could be applied to the difference in areas. Another area for improvement that the team noticed is that the current code extends actual profiles artifically to stay within a set horizontal maximum and minimum value. This becomes problematic when comparing a predicted profile that extends from the maximum to minimum horizotnal extents to an actual profile that has artifical, and rather incorrect, elevation data. The project team believes a truncation of the results to have a consistent horizontal maximum and minimum can alliviate this issue. In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour.
 
 The overall evaluation of these approaches underscores that while the SVD + ridge model effectively captures broad, long-term changes in river morphology, it is less proficient at detecting sudden, localized alterations. This dual approach highlights the necessity for advanced modeling techniques that can accommodate both gradual and rapid changes in river dynamics. Additionally, the interpretations derived from the modes align with established fluvial processes, demonstrating the model's utility as a screening tool for anticipating potential changes in river morphology, informing infrastructure decisions, sediment management, and ecological conservation efforts.
 
-=== Advanced Scour Modeling
-
-(JUST MY TWO CENTS BUT THIS MAY BE A GOOD "NEXT STEPS" TOPIC TO COVER...WAY TOO COMPLICATED FOR WHAT WE ARE DOING BUT IT WOULD BE POSSIBLE TO TAKE THIS MODELING TO THE NEXT LEVEL WITH DIRECT COMPUTATIONAL CAPABILITIES.)
-
-Athough there are five types of scour, we will focus on the two main causes, which are described by empirical equations accordingly:
-1. Contraction Scour - 
-  1. Laursen Live Bed or Clear Water Scour Equation
-$ V_c = K_u y_1^(1/6) D_50^(1/2) $
-2. Local Scour
-  1. Pier Scour - The Colorado State University (CSU) Equation
-  $ y_s = 2.0 K_1 K_2 K_3 K_4 a^0.65 y_1^0.35 "Fr"^0.43 $
-  2. Abutment Scour - The Frolich Equation
-  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a $
-
-To effectively apply the equations, we'll need to make informed assumptions. Since this is a Department of Transportation (DOT) project, our team plans to reference various publicly available DOT sources to make these assumptions. We'll then calculate or estimate variables related to flow velocity, streambed/channel geometry, and pier geometry using the gathered data.
+== Conclusion
+In conclusion, the modeling effort to date reveals critical insights into river dynamics and emphasizes the need for comprehensive methods that consider both common trends and rare events in fluvial systems. Supporting evidence from statistical analyses and ongoing literature review enriches the findings, reiterating the significance of continuous improvement in river modeling methodologies.
