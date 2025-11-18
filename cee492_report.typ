@@ -42,17 +42,16 @@ authors: (
 
 The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone to be the cause of collapse of 20-100 bridges per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. 1-dimensional analysis may provide a preliminary view of scour vulnerability but newer and larger datasets allow for a deeper analysis. 
 
-== Variables Involved with Scour
-
-Channel slope, cross-sectional area, volumetric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
-#figure(
-  image("figures/Scour1.png", width: 100%),
-  caption: [Scour at bridge foundation; risk of collapse. (Courtesy: Oregon Department of Transportation.)],
-) <proofread>
-
 === Schoharie Creek Bridge collapse
 
 In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment. In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
+
+=== Existing Research
+(IDEA: have a section that discusses "work prevously done by others". Perhaps cite some other research papers or reports.)
+
+= Exploratory Analysis
+
+(SECTION SHOULD ADDRESS: What data are you using for your analysis, and what are its characteristics? Tell the story of your data as it relates to the problem you are solving or question you are answering.)
 
 == Dataset - "Bridge scour data at selected bridge sites in Montana"
 
@@ -123,6 +122,13 @@ This project intends to use the coding language Julia to evaluate the different 
   ),
 ) <table-example>
 
+== Variables Involved with Scour
+
+Channel slope, cross-sectional area, volumetric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
+#figure(
+  image("figures/Scour1.png", width: 100%),
+  caption: [Scour at bridge foundation; risk of collapse. (Courtesy: Oregon Department of Transportation.)],
+) <proofread>
 
 == State of Montana Site Data
 
@@ -150,10 +156,6 @@ Additionally, The USGS provides expected flood event water levels by severity: h
   image("figures/Figure 3.png", width: 100%),
   caption: [Downstream Cross-Channel Profile at Subject Bridge.],
 ) <proofread>
-
-= Exploratory Analysis
-
-(SECTION SHOULD ADDRESS: What data are you using for your analysis, and what are its characteristics? Tell the story of your data as it relates to the problem you are solving or question you are answering.)
 
 The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the goals of the project set forth in the first submittal (i.e. the preceding paragraphs) were reasoned to be too challenging given the availability, complexity, and format of the necessary data. As mentioned in our prior submittal, the available scour data included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of this class. To give example, in order to try identifying and model the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate the subject bridge on the USGS StreamStats GIS page, investigate if there was a stream gauge measuring data in close proximity, and if that were true then hope that the dates on the stream gauge data coincided with the data collected on scour/elevation. It was determined by the research team that the described task would be far too challenging in itself, let alone decomposing and cleaning/tidying the complicated stream flow data in addition to the stream elevation data. 
 
@@ -250,12 +252,14 @@ In conclusion, the modeling effort to date reveals critical insights into river 
 
 (SECTION SHOULD ADDRESS: Were you able to answer your research question or support/refute your hypothesis? If not, why not? What would be your next steps if you were to continue this line of inquiry after the semester is over? (There can always be next steps, regardless of whether you have been able to answer your question or not.))
 
-== Next Steps
+== Future Efforts
 
 (COPIED FROM PREVIOUS SECTION, NEEDS EDITING)
 The project team noticed some areas which could be improved for the final report. First, the use of the R^2 and RSME as accuracy metrics seems useful, but could be supported by overall area comparisons. These comparsions could be made between the final year prediction vs actual, but are thought to be more insightful if the second to last year is compared to both the the actual final year profile along with the predicted final year profile. A cut, fill, or balance (values close to zero) could be applied to the difference in areas. Another area for improvement that the team noticed is that the current code extends actual profiles artifically to stay within a set horizontal maximum and minimum value. This becomes problematic when comparing a predicted profile that extends from the maximum to minimum horizotnal extents to an actual profile that has artifical, and rather incorrect, elevation data. The project team believes a truncation of the results to have a consistent horizontal maximum and minimum can alliviate this issue. In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour.
 
 The overall evaluation of these approaches underscores that while the SVD + ridge model effectively captures broad, long-term changes in river morphology, it is less proficient at detecting sudden, localized alterations. This dual approach highlights the necessity for advanced modeling techniques that can accommodate both gradual and rapid changes in river dynamics. Additionally, the interpretations derived from the modes align with established fluvial processes, demonstrating the model's utility as a screening tool for anticipating potential changes in river morphology, informing infrastructure decisions, sediment management, and ecological conservation efforts.
+
+=== Relation to Stream Gauge Data
 
 === Advanced Scour Modeling
 
