@@ -101,7 +101,32 @@ This study initially aimed to integrate diverse datasets from the USGS to ancill
 
 == Dataset - "Bridge scour data at selected bridge sites in Montana"
 
-State Departments of Transporataion (DOTs) are responsible for the inpection of in-service bridges.  Included in those requirments is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerabilty under different flood level scenarios.
+State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges.  Included in those requirements is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerability under different flood level scenarios.
+
+The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: 
+
+- https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
+
+Which includes: 
+
+- Cross-sectional geometry data 
+- Longitudinal streambed profiles along the sides of piers
+- Pier structure geometry data for section and side views
+- Water surface profiles 
+
+State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges. Included in those requirements is data for determining scour vulnerability. State DOTs collect cross-channel profiles at bridge sites on regular interval. They also evaluate channel conditions and consider bridge substructure geometry. Together with agencies like the United States Geological Survey (USGS), who collect data on stream flow and contraction geometry at bridge sites, engineers have the capability to evaluate scour vulnerability under different scenarios, including flood level events.
+
+Relating to this study, the U.S. Geological Survey (USGS) partnered with the Montana Department of Transportation (MDT) to acquire channel cross-section geometry upstream and downstream of designated highway bridges. To effectively distinguish between local pier scour and broader geomorphic processes, these data points span the full streambed width, including the abutments. Notably, contraction scour was ruled out as a contributing factor, as the bridge geometries did not induce significant flow contraction during spring runoff. The primary objective of this initiative was to detect scour and channel instability near bridge structures, providing a processed dataset that had the capabilities of enhancing the monitoring, documentation, and prediction of scour behavior.
+
+The data described above was published in four datasets on the USGS website:
+
+https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
+
+In summary the data includes: 
+- Cross-sectional geometry data 
+- Longitudinal streambed profiles along the sides of piers
+- Pier structure geometry data for section and side views
+- Water surface profiles 
 
 #figure(
   caption: [Bridge Cross Section Geometry],
@@ -172,19 +197,6 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
   image("figures/Scour1.png", width: 100%),
   caption: [Scour at Bridge Foundation; Risk of Collapse. (Courtesy: Oregon Department of Transportation.)],
 ) <proofread>
-
-== State of Montana Site Data
-
-The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: 
-
-- https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
-
-Which includes: 
-
-- Cross-sectional geometry data 
-- Longitudinal streambed profiles along the sides of piers
-- Pier structure geometry data for section and side views
-- Water surface profiles 
 
 Additionally, The USGS provides expected flood event water levels by severity: https://streamstats.usgs.gov/ss/ 
 
