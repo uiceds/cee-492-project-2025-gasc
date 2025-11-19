@@ -95,7 +95,7 @@ To effectively apply the equations, we'll need to make informed assumptions. Sin
 
 Channel slope, cross-sectional area, volumetric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
 
-= Exploratory Analysis
+= Exploratory Data Analysis (EDA)
 
 This study initially aimed to integrate diverse datasets from the USGS to ancillary datasets related to stream flow and weather data. The core datasets contained cross-sectional geometry, longitudinal streambed profiles, bridge pier geometry and location, along with water surface profiles. However, the Exploratory Data Analysis (EDA) phase revealed that harmonizing these disparate, independent datasets presented significant logistical challenges that threatened the project's feasibility. Consequently, the research team used the EDA process to refine the study's scope, shifting focus from broad hydraulic integration toward identifying actionable trends in streambed elevation changes to optimize inspection intervals. 
 
@@ -195,18 +195,18 @@ Referenced tables provide brief example of data included in each dataset.
 
 Additionally, The USGS provides expected flood event water levels by severity: https://streamstats.usgs.gov/ss/ 
 
-== Exploratory Data Analysis Process
+== EDA Process & Methodology
 
-The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the initial goals of the project were too challenging given the availability, complexity, and format of the necessary data. The available scour data, from the State of Montana USGS data, included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of the project.  
+The research team entered the EDA phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the initial goals of the project were too challenging given the availability, complexity, and format of the necessary data. The available scour data, from the State of Montana USGS data, included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of the project.  
 
-To give example, in order to try identifying and model the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate the subject bridge on the USGS StreamStats GIS page, investigate if there was a stream gauge measuring data in close proximity, and if that were true then hope that the dates on the stream gauge data coincided with the data collected on scour/elevation. It was determined by the research team that the described task would be far too challenging in itself, let alone decomposing and cleaning/tidying the complicated stream flow data in addition to the stream elevation data. 
+To give example, in order to try and identify and model the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate the subject bridge on the USGS StreamStats GIS page, investigate if there was a stream gauge measuring data in close proximity, and if that were true then hope that the dates on the stream gauge data (similar to that presented in Figure 4) coincided with the data collected on scour/elevation. It was determined by the research team that the described task would be far too challenging in itself, let alone decomposing and cleaning/tidying the complicated stream flow data in addition to the stream elevation data. 
 
 #figure(
   image("figures/Example_StreamStats_Data.png", width: 100%),
   caption: [Example StreamStats data from USGS.],
 ) <proofread>
 
-With the aforementioned limitations identified, the research team focused attention and efforts on finding a reasonable but potentially impactful way to analyze some of the data on hand. Remember, bridge scour is a serious concern for State and Federal entities, leading to thousands and even millions of dollars spent in monitoring costs. The research team thus changed its priority to evaluating if applying data science could help identify and model trends in streambed elevations. If correlations did prove to exist, a reliable model could be produced, having the potential to allow States and the Federal Government to more intelligently determine at what interval monitoring should be conducted, as opposed to standardized (and costly) yearly or bi-yearly .
+With the aforementioned limitations identified, the research team focused attention and efforts on finding a reasonable but potentially impactful way to analyze some of the data on hand. Remember, bridge scour is a serious concern for State and Federal entities, leading to thousands and even millions of dollars spent in monitoring costs. The research team thus changed its priority to evaluating if applying data science could help identify and model trends in streambed elevations. If correlations did prove to exist, a reliable model could be produced, having the potential to allow States and the Federal Government to more intelligently determine at what interval monitoring should be conducted, as opposed to standardized (and costly) yearly or bi-yearly. The data the project team focused preliminarily focused is summarized in Table V below.
 
 #figure(
   caption: [Basic Data Stats],
