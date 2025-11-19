@@ -107,7 +107,7 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
   caption: [Bridge Cross Section Geometry],
   table(
     columns: (auto, auto, auto, auto),
-    table.header([*Northing*], [*Easting*], [*Elevation*], [*Distance*]),
+    table.header([*Northing (FT)*], [*Easting (FT)*], [*Elevation (FT)*], [*Distance (ft)*]),
     "1556480.572", "1167958.24", "3952.34", "0",
  "1556480.015",	"1167959.133",	"3951.11",	"1.05",
 "1556479.323",	"1167960.241",	"3950.23",	"2.36",
@@ -122,7 +122,7 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
   caption: [Bridge Channel Cross-Sectional Profile],
   table(
     columns: (auto, auto, auto),
-    table.header([*Distance from Abutment*], [*Channel Depth*], [*Below Water Level*]),
+    table.header([*Distance from Abutment (ft)*], [*Channel Depth (ft)*], [*Below Water Level*]),
     "0.0", "1.2", "No",
     "4.0", "2.4", "No",
     "8.0", "3.8", "Yes",
@@ -137,7 +137,7 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
   caption: [Pier Structure Geometry Data],
   table(
     columns: (auto, auto, auto, auto, auto),
-    table.header([*Pier*], [*Elevation*], [*Distance*], [*CL*], [*Foundation*]),
+    table.header([*Pier*], [*Elevation (FT)*], [*Distance (ft)*], [*CL (ft)*], [*Foundation*]),
     "P4",	"3313.996",	"63.83",	"68.33",	"Known",
 "P3",	"3313.516",	"136.27",	"140.77",	"Known",
 "P3",	"3307.016",	"136.27",	"140.77",	"Known",
@@ -155,7 +155,7 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
   caption: [Water Surface Profile Profile],
   table(
     columns: (auto, auto, auto),
-    table.header([*Northing*], [*Easting*], [*Elevation*]),
+    table.header([*Northing (FT)*], [*Easting (FT)*], [*Elevation (ft)*]),
     "1102284.1",	"1913872.63",	"3204.09",
 "1102293.07",	"1913869.11",	"3204.1",
 "1102295.2",	"1913867.71",	"3204.07",
