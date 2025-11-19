@@ -55,7 +55,7 @@ Given this context, the project team’s primary research hypothesis is that an 
 
 == The Problem of Bridge Scour
 
-The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone to be the cause of collapse of 20-100 bridges per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. 1-dimensional analysis may provide a preliminary view of scour vulnerability but newer and larger datasets allow for a deeper analysis. #v(0.4em) 
+The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone to be the cause of collapse of 20-100 bridges per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. #v(0.4em) 
 
 === Schoharie Creek Bridge Collapse
 
@@ -73,7 +73,7 @@ While the number of these hypothetical questions could begin to approach infinit
   caption: [Schoharie Creek Bridge Collapse at Amsterdam, N.Y., 1987 (Courtesy: Times Union and AP Photo/Jim McKnight)],
 ) 
 
-=== State of Practice
+=== State of the Practice
 
 (IDEA: have a section that discusses "work prevously done by others". Perhaps cite some other research papers or reports.)#v(0.5em)
 
@@ -173,7 +173,7 @@ State Departments of Transporataion (DOTs) are responsible for the inpection of 
   caption: [Scour at Bridge Foundation; Risk of Collapse. (Courtesy: Oregon Department of Transportation.)],
 ) <proofread>
 
-== State of Montana Site Data
+== State of Montana USGS Data
 
 The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: 
 
