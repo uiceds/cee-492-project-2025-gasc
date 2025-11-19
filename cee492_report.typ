@@ -101,7 +101,12 @@ This study initially aimed to integrate diverse datasets from the USGS to ancill
 
 == Dataset - "Bridge scour data at selected bridge sites in Montana"
 
-State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges.  Included in those requirements is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerability under different flood level scenarios.
+State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges.  Included in those requirements is data for determining scour vulnerability.  State DOTs collect cross-channel profiles at bridge sites on regular intervals, they also evaluate channel conditions and consider bridge substructure geometry.  Together with United States Geologoical Survey (USGS) stream flow data, and contraction geometry at the bridge site, engineers evaluate scour vulnerability under different flood level scenarios. Fiure 2 provides example of what a bridge affected by scour can look like.
+
+#figure(
+  image("figures/Scour1.png", width: 100%),
+  caption: [Scour at Bridge Foundation; Risk of Collapse. (Courtesy: Oregon Department of Transportation.)],
+) <proofread>
 
 The State of Montana has published four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: 
 
@@ -109,24 +114,13 @@ The State of Montana has published four datasets regarding hydraulic information
 
 Which includes: 
 
-- Cross-sectional geometry data 
-- Longitudinal streambed profiles along the sides of piers
-- Pier structure geometry data for section and side views
-- Water surface profiles 
+- Cross-sectional foundation geometry data (Table I) 
+- Cross-sectional foundation geometry data in relation to stream (Table II) 
+- Streambed profiles along the sides of piers (Figure 3)
+- Pier structure geometry data for section and side views (Table III)
+- Water surface profiles (Table IV)
 
-State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges. Included in those requirements is data for determining scour vulnerability. State DOTs collect cross-channel profiles at bridge sites on regular interval. They also evaluate channel conditions and consider bridge substructure geometry. Together with agencies like the United States Geological Survey (USGS), who collect data on stream flow and contraction geometry at bridge sites, engineers have the capability to evaluate scour vulnerability under different scenarios, including flood level events.
-
-Relating to this study, the U.S. Geological Survey (USGS) partnered with the Montana Department of Transportation (MDT) to acquire channel cross-section geometry upstream and downstream of designated highway bridges. To effectively distinguish between local pier scour and broader geomorphic processes, these data points span the full streambed width, including the abutments. Notably, contraction scour was ruled out as a contributing factor, as the bridge geometries did not induce significant flow contraction during spring runoff. The primary objective of this initiative was to detect scour and channel instability near bridge structures, providing a processed dataset that had the capabilities of enhancing the monitoring, documentation, and prediction of scour behavior.
-
-The data described above was published in four datasets on the USGS website:
-
-https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
-
-In summary the data includes: 
-- Cross-sectional geometry data 
-- Longitudinal streambed profiles along the sides of piers
-- Pier structure geometry data for section and side views
-- Water surface profiles 
+Referenced tables provide brief example of data included in each dataset.
 
 #figure(
   caption: [Bridge Cross Section Geometry],
@@ -156,6 +150,13 @@ In summary the data includes:
     "22.0", "1.8", "No",
 
   ),
+
+#figure(
+  image("figures/Figure 3.png", width: 100%),
+  caption: [Downstream Cross-Channel Profile at Subject Bridge.],
+) <proofread>
+
+
 ) <table-example>
 
 #figure(
@@ -192,19 +193,11 @@ In summary the data includes:
   ),
 ) <table-example>
 
-
-#figure(
-  image("figures/Scour1.png", width: 100%),
-  caption: [Scour at Bridge Foundation; Risk of Collapse. (Courtesy: Oregon Department of Transportation.)],
-) <proofread>
-
 Additionally, The USGS provides expected flood event water levels by severity: https://streamstats.usgs.gov/ss/ 
 
-#figure(
-  image("figures/Figure 3.png", width: 100%),
-  caption: [Downstream Cross-Channel Profile at Subject Bridge.],
-) <proofread>
+State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges. Included in those requirements is data for determining scour vulnerability. State DOTs collect cross-channel profiles at bridge sites on regular interval. They also evaluate channel conditions and consider bridge substructure geometry. Together with agencies like the United States Geological Survey (USGS), who collect data on stream flow and contraction geometry at bridge sites, engineers have the capability to evaluate scour vulnerability under different scenarios, including flood level events.
 
+Relating to this study, the U.S. Geological Survey (USGS) partnered with the Montana Department of Transportation (MDT) to acquire channel cross-section geometry upstream and downstream of designated highway bridges. To effectively distinguish between local pier scour and broader geomorphic processes, these data points span the full streambed width, including the abutments. Notably, contraction scour was ruled out as a contributing factor, as the bridge geometries did not induce significant flow contraction during spring runoff. The primary objective of this initiative was to detect scour and channel instability near bridge structures, providing a processed dataset that had the capabilities of enhancing the monitoring, documentation, and prediction of scour behavior.
 == Exploratory Data Analysis Process
 
 The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the initial goals of the project were too challenging given the availability, complexity, and format of the necessary data. The available scour data, from the State of Montana USGS data, included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of the project.  
