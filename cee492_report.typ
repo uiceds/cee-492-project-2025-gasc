@@ -55,7 +55,7 @@ Given this context, the project team’s primary research hypothesis is that an 
 
 == The Problem of Bridge Scour
 
-The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone can result in the cause 20-100 bridge collapses per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. #v(0.4em) 
+The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone can result in the cause of 20-100 bridge collapses per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. #v(0.4em) 
 
 === Schoharie Creek Bridge Collapse
 
@@ -75,7 +75,9 @@ While the number of these hypothetical questions could begin to approach infinit
 
 === State of the Practice
 
-(IDEA: have a section that discusses "work prevously done by others". Perhaps cite some other research papers or reports.)#v(0.5em)
+
+-----> SAFI PARAGRAPH WITH ACADEMIC REFERENCES HERE
+
 
 ==== Advanced Scour Modeling
 
@@ -103,7 +105,7 @@ This study initially aimed to integrate diverse datasets from the USGS to ancill
 
 State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges. Included in those requirements is data for determining scour vulnerability. State DOTs collect cross-channel profiles at bridge sites on regular interval. They also evaluate channel conditions and consider bridge substructure geometry. Together with agencies like the United States Geological Survey (USGS), who collect data on stream flow and contraction geometry at bridge sites, engineers have the capability to evaluate scour vulnerability under different scenarios, including flood level events.
 
-Relating to this study, the U.S. Geological Survey (USGS) partnered with the Montana Department of Transportation (MDT) to acquire channel cross-section geometry upstream and downstream of designated highway bridges. To effectively distinguish between local pier scour and broader geomorphic processes, these data points span the full streambed width, including the abutments. Notably, contraction scour was ruled out as a contributing factor, as the bridge geometries did not induce significant flow contraction during spring runoff. The primary objective of this initiative was to detect scour and channel instability near bridge structures. Figure 2 provides example of what a bridge affected by scour can look like.
+Relating to this study, the USGS partnered with the Montana Department of Transportation (MDT) to acquire channel cross-section geometry upstream and downstream of designated highway bridges. To effectively distinguish between local pier scour and broader geomorphic processes, these data points span the full streambed width, including the abutments. Notably, contraction scour was ruled out as a contributing factor, as the bridge geometries did not induce significant flow contraction during spring runoff. The primary objective of this initiative was to detect scour and channel instability near bridge structures. Figure 2 provides example of what a bridge affected by scour can look like.
 
 #figure(
   image("figures/Scour1.png", width: 100%),
@@ -122,7 +124,7 @@ The datasets included:
 - Pier structure geometry data for section and side views (Table III)
 - Water surface profiles (Table IV)
 
-Referenced tables provide brief example of data included in each dataset.
+Referenced tables and figures provide brief example of data included in each dataset.
 
 #figure(
   caption: [Bridge Cross Section Geometry],
@@ -206,7 +208,7 @@ To give example, in order to try and identify and model the relationships betwee
   caption: [Example StreamStats data from USGS.],
 ) <proofread>
 
-With the aforementioned limitations identified, the research team focused attention and efforts on finding a reasonable but potentially impactful way to analyze some of the data on hand. Remember, bridge scour is a serious concern for State and Federal entities, leading to thousands and even millions of dollars spent in monitoring costs. The research team thus changed its priority to evaluating if applying data science could help identify and model trends in streambed elevations. If correlations did prove to exist, a reliable model could be produced, having the potential to allow States and the Federal Government to more intelligently determine at what interval monitoring should be conducted, as opposed to standardized (and costly) yearly or bi-yearly. The data the project team focused preliminarily focused is summarized in Table V below.
+With the aforementioned limitations identified, the research team focused attention and efforts on finding a reasonable but potentially impactful way to analyze some of the data on hand. Remember, bridge scour is a serious concern for State and Federal entities, leading to thousands and even millions of dollars spent in monitoring costs. The research team thus changed its priority to evaluating if applying data science could help identify and model trends in streambed elevations. If correlations did prove to exist, a reliable model could be produced, having the potential to allow States and the Federal Government to more intelligently determine at what interval monitoring should be conducted, as opposed to standardized (and costly) yearly or bi-yearly. The data the project team preliminarily focused on is summarized in Table V below.
 
 #figure(
   caption: [Basic Data Stats],
@@ -250,7 +252,7 @@ As discussed in the preceding section, the USGS data required reformatting in or
   caption: [SVD Modes 1 & 2 for Subject Bridge Structure],
 ) <proofread>
 
-Following this, training data was then able to be created for the prospective predictive model. Most of the stream bed profiles investigated by the project team exhibited significant variability (or 'noise'), as seen for the 2023 data in Figure 5. This high variability, combined with the fact that adjacent elevation points are highly correlated, could cause a standard model to overfit the data. Therefore, a regularized multiple linear regression model was chosen. The project team used the regularization parameter to prevent overfitting of the data. This was believed to produce a more stable and robust prediction. For this submission, the model was used to predict the last observed year for a given bridge structure.
+Following this, training data was then able to be created for the prospective predictive model. Most of the stream bed profiles investigated by the project team exhibited significant variability (or 'noise'), as seen for the 2023 data in Figure 5. This high variability, combined with the fact that adjacent elevation points were highly correlated, had a high probability to make a standard model overfit the data. Therefore, a regularized multiple linear regression model was chosen. The project team used the regularization parameter to prevent overfitting of the data. This was believed to produce a more stable and robust prediction. For this submission, the model was used to predict the last observed year for a given bridge structure.
 
 == Results
 In order to produce meaningful results, a user-friendly interface needed to be created in the Pluto notebook interface. Through the use of drop-down menus and various graphs, like those presented in figures 5-7, understanding the data, along with the results, was made possible. Figure 8 shows the resulting plot in which the predicted profile for the last year is superimposed on the actual profile for that same year. The application of SVD with Ridge Regularization effectively decomposed the complex riverbed profiles into two primary behaviors: general changes in bed depth and lateral channel migration (asymmetry). By prioritizing these dominant modes, the model minimized overfitting and produced a stable forecast. While this approach successfully predicted the broader channel shape (low-frequency trends), its smoothing effect limited the ability to capture sharp, high-frequency changes. Consequently, the model excels at forecasting general channel evolution but may underestimate abrupt, localized features such as deep scour holes or steep bank transitions.
@@ -260,7 +262,7 @@ In order to produce meaningful results, a user-friendly interface needed to be c
   caption: [Last Observed Year: Actual v. Predicted Profile],
 ) <proofread>
 
-It can be seen in Figure 8 that the predicted profile is in relatively good agreement with the actual profile. To make this observation more quantitative, the project team worked on applying accuracy metrics to the data. The project team chose to use the coefficient of determination (COD), more familiarly known as R^2, along with Root Mean Squared Error (RMSE) to gauge the accuracy of the model. The scope of analysis was limited to three bridges on the same river, the Bitterroot. These structures included: P00007 043+0.666, S00373000+04001, S00370 000+0.5361. Both the upstream and downstream data were analyzed for these structures. Predictions made for the final observed year’s profile were made and the accuracy metrics were recorded. The results are presented in the following table, Table  6.
+It can be seen in Figure 8 that the predicted profile is in relatively good agreement with the actual profile. To make this observation more quantitative, the project team worked on applying accuracy metrics to the data. The project team chose to use the coefficient of determination (COD), more familiarly known as R^2, along with Root Mean Squared Error (RMSE) to gauge the accuracy of the model. The scope of analysis was limited to three structures on the same river, the Bitterroot. These structures included: P00007 043+0.666, S00373000+04001, S00370 000+0.5361. Both the upstream and downstream data were analyzed for these structures. Predictions made for the final observed year’s profile were made and the accuracy metrics were recorded. The results are presented in the following table, Table  6.
 
 #figure(
   caption: [Predictive Model Results],
@@ -278,7 +280,7 @@ It can be seen in Figure 8 that the predicted profile is in relatively good agre
 
 From the results presented in the above table and by referencing the respective figures (Figure 5 and 6) for each structure, it was apparent that of the three structures, the structures with the least variation year to year had more accurate model predictions than the more erratic years. Structure S00370 000+0.5361, both in the upstream and downstream sides, has the most erratic streambed profile year over year. The predicted profiles for this structure had the lowest R^2 value, which is supported by the previous statement regarding the erratic streambed elevations. 
 
-While the R^2 value differed per structure, something that remained relatively consistent was the RMSE for all observation made. The column in table 6 is reported in feet and represents the magnitude of inaccuracy between the predicted and actual profile at any given point. 
+While the R^2 value differed per structure, something that remained relatively consistent was the RMSE for all observations made. The column in table 6 is reported in feet and represents the magnitude of inaccuracy between the predicted and actual profile at any given point. 
 
 == Conclusions
 In conclusion, the modeling effort to date reveals critical insights into river dynamics and emphasizes the need for comprehensive methods that consider both common trends and rare events in fluvial systems. Supporting evidence from statistical analyses and ongoing literature review enriches the findings, reiterating the significance of continuous improvement in river modeling methodologies.
