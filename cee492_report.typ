@@ -205,11 +205,6 @@ Additionally, The USGS provides expected flood event water levels by severity: h
   caption: [Downstream Cross-Channel Profile at Subject Bridge.],
 ) <proofread>
 
-#figure(
-  image("figures/Scour2.png", width: 100%),
-  caption: [Temporary Fix at Severe Scour Location. (Courtesy: Oregon Department of Transportation.)],
-) <proofread>
-
 == Exploratory Data Analysis Process
 
 The research team entered the exploratory data analysis (EDA) phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the initial goals of the project were too challenging given the availability, complexity, and format of the necessary data. The available scour data, from the State of Montana USGS data, included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of the project.  
