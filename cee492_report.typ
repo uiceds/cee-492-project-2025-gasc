@@ -150,14 +150,12 @@ Referenced tables provide brief example of data included in each dataset.
     "22.0", "1.8", "No",
 
   ),
+) <table-example>
 
 #figure(
   image("figures/Figure 3.png", width: 100%),
   caption: [Downstream Cross-Channel Profile at Subject Bridge.],
 ) <proofread>
-
-
-) <table-example>
 
 #figure(
   caption: [Pier Structure Geometry Data],
