@@ -1,5 +1,5 @@
 #import "@preview/charged-ieee:0.1.4": ieee
-#set page(numbering: "i")
+#set page(numbering: "i") 
 
 #show: ieee.with(
   title: [
@@ -49,22 +49,25 @@ authors: (
 = Introduction
 
 This study has been motivated by the potential to apply the principles of data science to the critical infrastructure problem of bridge foundation scour. The underlying intent of the study is to leverage modern analytical techniques to gain new insights into scour behavior in the hopes of providing quality insight into how to more effectively monitor, mitigate, and  protect vital public assets from the problem of scour. More generally, the project team hopes to showcase the value that modern data science can provide to a classic civil engineering problem.
-
+#v(0.3em)
 Given this context, the project team’s primary research hypothesis is that an analysis of historical stream bed profile data, when processed using data science methodologies, can reveal detectable patterns and key indicators related to scour behavior at specific bridge locations if the necessary, yet rudimentary, data is collected. This study specifically investigates this hypothesis by applying the Julia programming language to analyze stream bed profile data supplied by the USGS for select bridges in the state of Montana. While the precise scope of the project evolved during the Exploratory Data Analysis (EDA) phase, the fundamental objective remained unchanged: to use data science to uncover actionable insights from hydrological and structural data related to bridge scour.
-
 
 == The Problem of Bridge Scour
 
 The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone can result in the cause of 20-100 bridge collapses per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. #v(0.4em) 
 
-=== Schoharie Creek Bridge Collapse
+=== Schoharie Creek Bridge Collapse 
 
-In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment. In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
+In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment.  In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
+#v(0.3em)
+This historic event highlights how scour can be a serious public safety issue. Figure 1 below shows the afterman of the collapse, which took the lives of ten people. While this may be an extreme case, it serves as a grim reminder of what this research seeks to prevent. We can ask hypothetical questions to relate this tragedy to the current study:
 
-This historic event highlights how scour can be a serious public safety issue. While this may be an extreme case, it serves as a grim reminder of what this research seeks to prevent. We can ask hypothetical questions to relate this tragedy to the current study:
+#v(0.3em)
 
 -	What if the magnitude of scour potential had been identified prior to this event?
 -	What if inspection frequency was optimized to allow for high-quality assessment?
+
+#v(0.3em)
 
 While the number of these hypothetical questions could begin to approach infinity, the event has already occurred. The focus now must shift to preventing the next disaster of this magnitude. By leveraging modern data science and stream profile analysis, we aim to move from reactive "what-ifs" to proactive prediction. 
 
@@ -75,13 +78,17 @@ While the number of these hypothetical questions could begin to approach infinit
 
 === State of the Practice
 
-
+#v(1.0em)
 -----> SAFI PARAGRAPH WITH ACADEMIC REFERENCES HERE
+#v(1.0em)
 
+THIS PARAGRAPH CAME FROM PREVIOUS CONCLUSION, MAY BE HERE. In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour.
+
+#v(1.0em)
 
 ==== Advanced Scour Modeling
 
-Athough there are five types of scour, we will focus on the two main causes, which are described by empirical equations accordingly:
+Athough there are five types of scour, we will focus on the two main causes, which are described by empirical equations accordingly:#v(0.3em)
 1. Contraction Scour - 
   1. Laursen Live Bed or Clear Water Scour Equation
 $ V_c = K_u y_1^(1/6) D_50^(1/2) $
@@ -89,9 +96,9 @@ $ V_c = K_u y_1^(1/6) D_50^(1/2) $
   1. Pier Scour - The Colorado State University (CSU) Equation
   $ y_s = 2.0 K_1 K_2 K_3 K_4 a^0.65 y_1^0.35 "Fr"^0.43 $
   2. Abutment Scour - The Frolich Equation
-  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a $
+  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a $#v(0.3em)
 
-To effectively apply the equations, we'll need to make informed assumptions. Since this is a Department of Transportation (DOT) project, our team plans to reference various publicly available DOT sources to make these assumptions. We'll then calculate or estimate variables related to flow velocity, streambed/channel geometry, and pier geometry using the gathered data.
+To effectively apply the equations, we'll need to make informed assumptions. Since this is a Department of Transportation (DOT) project, our team plans to reference various publicly available DOT sources to make these assumptions. We'll then calculate or estimate variables related to flow velocity, streambed/channel geometry, and pier geometry using the gathered data. #v(0.3em)
 
 ==== Variables Involved with Scour
 
@@ -99,32 +106,32 @@ Channel slope, cross-sectional area, volumetric flow rates, contraction geometry
 
 = Exploratory Data Analysis (EDA)
 
-This study initially aimed to integrate diverse datasets from the USGS to ancillary datasets related to stream flow and weather data. The core datasets contained cross-sectional geometry, longitudinal streambed profiles, bridge pier geometry and location, along with water surface profiles. However, the Exploratory Data Analysis (EDA) phase revealed that harmonizing these disparate, independent datasets presented significant logistical challenges that threatened the project's feasibility. Consequently, the research team used the EDA process to refine the study's scope, shifting focus from broad hydraulic integration toward identifying actionable trends in streambed elevation changes to optimize inspection intervals. 
+This study initially aimed to integrate diverse datasets from the USGS to ancillary datasets related to stream flow and weather data. The core datasets contained cross-sectional geometry, longitudinal streambed profiles, bridge pier geometry and location, along with water surface profiles. However, the Exploratory Data Analysis (EDA) phase revealed that harmonizing these disparate, independent datasets presented significant logistical challenges that threatened the project's feasibility. Consequently, the research team used the EDA process to refine the study's scope, shifting focus from broad hydraulic integration toward identifying actionable trends in streambed elevation changes to predict trends and optimize inspection intervals. 
 
 == Dataset - "Bridge scour data at selected bridge sites in Montana"
 
 State Departments of Transportation (DOTs) are responsible for the inspection of in-service bridges. Included in those requirements is data for determining scour vulnerability. State DOTs collect cross-channel profiles at bridge sites on regular interval. They also evaluate channel conditions and consider bridge substructure geometry. Together with agencies like the United States Geological Survey (USGS), who collect data on stream flow and contraction geometry at bridge sites, engineers have the capability to evaluate scour vulnerability under different scenarios, including flood level events.
-
-Relating to this study, the USGS partnered with the Montana Department of Transportation (MDT) to acquire channel cross-section geometry upstream and downstream of designated highway bridges. To effectively distinguish between local pier scour and broader geomorphic processes, these data points span the full streambed width, including the abutments. Notably, contraction scour was ruled out as a contributing factor, as the bridge geometries did not induce significant flow contraction during spring runoff. The primary objective of this initiative was to detect scour and channel instability near bridge structures. Figure 2 provides example of what a bridge affected by scour can look like.
+#v(0.3em)
+Relating to this study, the USGS partnered with the Montana Department of Transportation (MDT) to acquire channel cross-section geometry upstream and downstream of designated highway bridges. To effectively distinguish between local pier scour and broader geomorphic processes, these data points span the full streambed width, including the abutments. Notably, contraction scour was ruled out as a contributing factor, as the bridge geometries did not induce significant flow contraction during spring runoff. The primary objective of this initiative was to detect scour and channel instability near bridge structures. Figure 2 provides example of what a bridge affected by severe scour can look like.
 
 #figure(
   image("figures/Scour1.png", width: 100%),
   caption: [Scour at Bridge Foundation; Risk of Collapse. (Courtesy: Oregon Department of Transportation.)],
 ) <proofread>
 
-The aforementioned data relating to the state of Montana was published in four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here: 
+The aforementioned data relating to the state of Montana was published in four datasets regarding hydraulic information at bridge locations, in CSV or excel form found here:#v(0.3em) 
 
 - https://www.sciencebase.gov/catalog/item/66abb29ad34e20d4a0358111
-
+#v(0.3em)
 The datasets included: 
-
+#v(0.3em)
 - Cross-sectional foundation geometry data (Table I) 
 - Cross-sectional foundation geometry data in relation to stream (Table II) 
 - Streambed profiles along the sides of piers (Figure 3)
 - Pier structure geometry data for section and side views (Table III)
 - Water surface profiles (Table IV)
-
-Referenced tables and figures provide brief example of data included in each dataset.
+#v(0.3em)
+The referenced tables and figures provide a brief example of data included in each dataset. As the tables and figures show, the data is robust but in disjointed and/or rudimentary format, lending support to the need for this modeling project. 
 
 #figure(
   caption: [Bridge Cross Section Geometry],
@@ -195,12 +202,10 @@ Referenced tables and figures provide brief example of data included in each dat
   ),
 ) <table-example>
 
-Additionally, The USGS provides expected flood event water levels by severity: https://streamstats.usgs.gov/ss/ 
-
 == EDA Process & Methodology
 
 The research team entered the EDA phase with the intent of further investigating the available data sources and refining its project statement. Despite best efforts, the initial findings suggested that the initial goals of the project were too challenging given the availability, complexity, and format of the necessary data. The available scour data, from the State of Montana USGS data, included numerous unique and rather independent datasets, including cross-sectional geometry data, longitudinal profile data, pier structure data, water surface profiles, and sporadic but extensive stream flow data. Attempting to collect, refine, and subsequently tie such a wide variety of complex data was decidedly understood to be beyond the scope of the project.  
-
+#v(0.3em)
 To give example, in order to try and identify and model the relationships between stream flows and scour, the team would have needed to first find a bridge with enough data between 2012 and 2024, locate the subject bridge on the USGS StreamStats GIS page, investigate if there was a stream gauge measuring data in close proximity, and if that were true then hope that the dates on the stream gauge data (similar to that presented in Figure 4) coincided with the data collected on scour/elevation. It was determined by the research team that the described task would be far too challenging in itself, let alone decomposing and cleaning/tidying the complicated stream flow data in addition to the stream elevation data. 
 
 #figure(
@@ -223,7 +228,7 @@ With the aforementioned limitations identified, the research team focused attent
 ) <table-example>
 
 Consequently, the research team successfully compiled the cross-sectional streambed data provided by the USGS, ranging from 2012 to 2024, into a single dataframe that had the potential to be used for the predictive modeling. The Julia language was used within a Pluto workbook interface, where initial cleaning/tidying of the data was performed. Following this, the team began simplifying the ability to visualize the data. Figure 5 shows the plots of a sample bridge, with both upstream and downstream surface elevations changing throughout the observed years. While this presentation provides an overall view of the streambed elevations across the observed range of years, it can at times be difficult to interpret from a vast legend what profile relates to which year. Thus, an additional presentation was chosen. In this additional presentation, each observed year for a given structure is provided a separate graph with the previous year’s profile superimposed in a dashed line on the same graph. This allowed for easier interpretation  of whether the difference from one year to the next was considered a cut, fill, or balance.
-
+#v(0.3em)
 Both presentations of the streambed elevations across overserved years were seen as beneficial to the project team. The Figure 5 presentation allows the observer to account for overall variation of the dataset. Contrastingly, the presentation presented in Figure 6 allows, as previously discussed, the observer to account for cuts, fills, or balances in the overall streambed across observed years. In the project team’s opinion, the characterization of the streambed year to year as a cut, fill, or balance is seen as the most holistic take on the comparison of streambed profiles. The profiles presented in Figure 6 have been normalized following recommendations provided to the project team. This normalization allows for comparison between profiles at different structures.  
 
 #figure(
@@ -241,7 +246,7 @@ Both presentations of the streambed elevations across overserved years were seen
 == Initial Predictive Modeling Strategy
 
 With the project scope refined and simplified, the research team sought out to begin planning on how to refine the data further and formulate how to eventually generate the previously described predictive model. The team was foremost interested in determining if there were noticeable trends in the streambed data. Through preliminary research and initial understanding, the research team came to believe that SVD and PCA had the capability to provide insights into the underlying trends within the streambed data. SVD and PCA were eventually explored, quite thoroughly, and required the data to be reformatted. The restructuring involved transitioning the initial data frame, which was a comprehensive collection of all bridges, across all years, and both upstream and downstream elevations, into a matrix format that was suitable for SVD/PCA analysis and focused on singular bridges with separated upstream and downstream matrices. Our team realized that the first and second modes of the PCA/SVD analyses were able to provide the most useful information. The first mode captured the overall summation of cut and fill across the stream bed, while the second mode focused more on local changes. The trends present in the second mode of the SVD/PCA are thought to be the most applicable to the scour problem at hand since they have the possibility of being correlated with the known pier coordinates at each bridge location.
-
+#v(0.3em)
 Following the reformatting of the data, the team focused on developing the predictive model. In the process of this, the project team evaluated whether to utilize the entire streambed cross-section or focus on localized pier data. Concurrent with scope adjustments, the team determined that integrating specific pier locations with the broader streambed data was effectively unfeasible. Therefore, the SVD/PCA analyses was conducted exclusively on the streambed geometry data. To manage the dimensionality of the dataset, the team decided to narrow the scope to bridges located along a single watercourse. Prioritizing a river with abundant, high-quality historical data was critical to this approach. Preliminary analysis identified the Bitterroot River as a prime candidate, featuring three distinct structures with over five years of observation data. While the team considered an alternative approach—developing a single-bridge model using a temporal training split (e.g., 2012–2020) for validation—the multi-bridge analysis of the Bitterroot River was selected as the superior strategy.
 
 == Methods
@@ -279,21 +284,34 @@ It can be seen in Figure 8 that the predicted profile is in relatively good agre
 ) <table-example>
 
 From the results presented in the above table and by referencing the respective figures (Figure 5 and 6) for each structure, it was apparent that of the three structures, the structures with the least variation year to year had more accurate model predictions than the more erratic years. Structure S00370 000+0.5361, both in the upstream and downstream sides, has the most erratic streambed profile year over year. The predicted profiles for this structure had the lowest R^2 value, which is supported by the previous statement regarding the erratic streambed elevations. 
-
+#v(0.3em)
 While the R^2 value differed per structure, something that remained relatively consistent was the RMSE for all observations made. The column in table 6 is reported in feet and represents the magnitude of inaccuracy between the predicted and actual profile at any given point. 
 
 == Conclusions
+#v(1.0em)
+QUESTION TO ANSWER" what conclusions can you draw from it?
+#v(1.0em)
+
 In conclusion, the modeling effort to date reveals critical insights into river dynamics and emphasizes the need for comprehensive methods that consider both common trends and rare events in fluvial systems. Supporting evidence from statistical analyses and ongoing literature review enriches the findings, reiterating the significance of continuous improvement in river modeling methodologies.
 
 = Discussion
 
+#v(1.0em)
+QUESTION TO ANSWER: Were you able to answer your research question or support/refute your hypothesis? If not, why not? What would be your next steps if you were to continue this line of inquiry after the semester is over? (There can always be next steps, regardless of whether you have been able to answer your question or not.)
+#v(1.0em)
+
 == Future Efforts
 
-(COPIED FROM PREVIOUS SECTION, NEEDS EDITING)
-The project team noticed some areas which could be improved for the final report. First, the use of the R^2 and RSME as accuracy metrics seems useful, but could be supported by overall area comparisons. These comparsions could be made between the final year prediction vs actual, but are thought to be more insightful if the second to last year is compared to both the the actual final year profile along with the predicted final year profile. A cut, fill, or balance (values close to zero) could be applied to the difference in areas. Another area for improvement that the team noticed is that the current code extends actual profiles artifically to stay within a set horizontal maximum and minimum value. This becomes problematic when comparing a predicted profile that extends from the maximum to minimum horizotnal extents to an actual profile that has artifical, and rather incorrect, elevation data. The project team believes a truncation of the results to have a consistent horizontal maximum and minimum can alliviate this issue. In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour.
+=== Advanced Modeling Strategies
 
-The overall evaluation of these approaches underscores that while the SVD + ridge model effectively captures broad, long-term changes in river morphology, it is less proficient at detecting sudden, localized alterations. This dual approach highlights the necessity for advanced modeling techniques that can accommodate both gradual and rapid changes in river dynamics. Additionally, the interpretations derived from the modes align with established fluvial processes, demonstrating the model's utility as a screening tool for anticipating potential changes in river morphology, informing infrastructure decisions, sediment management, and ecological conservation efforts.
+The research team recognizes that while the current model provides valuable insights, there are shortcomings and several avenues for future enhancement. One potential direction is to explore non-linear modeling techniques disussed in class, such as neural networks, which may better capture complex interactions within the data. Additionally, incorporating temporal dynamics through time-series analysis could improve the model's ability to predict future scour events based on historical trends.
+
+(COPIED FROM PREVIOUS SECTION, NEEDS EDITING)
+The project team noticed some areas which could be improved for the final report. First, the use of the R^2 and RSME as accuracy metrics seems useful, but could be supported by overall area comparisons. These comparsions could be made between the final year prediction vs actual, but are thought to be more insightful if the second to last year is compared to both the the actual final year profile along with the predicted final year profile. A cut, fill, or balance (values close to zero) could be applied to the difference in areas. Another area for improvement that the team noticed is that the current code extends actual profiles artifically to stay within a set horizontal maximum and minimum value. This becomes problematic when comparing a predicted profile that extends from the maximum to minimum horizotnal extents to an actual profile that has artifical, and rather incorrect, elevation data. The project team believes a truncation of the results to have a consistent horizontal maximum and minimum can alliviate this issue. 
+
+#v(0.3em)
 
 === Relation to Stream Gauge Data
 
+Another potential step for this line of research is drawing connection between the stream gauge data, observed streambed elevation data, and the predictive model. As discussed previously, the USGS keeps vast amounts of stream data, which add key context to when and why given streams may experience scour. 
 
