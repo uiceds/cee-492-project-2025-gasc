@@ -78,13 +78,13 @@ While the number of these hypothetical questions could begin to approach infinit
 
 === State of the Practice
 
-#v(1.0em)
-Bridge scour, the erosion of riverbeds around bridge foundations due to flowing water, is a leading cause of bridge failures worldwide, accounting for approximately 31.53% of hydraulic failures. In the United States, hydraulic-related issues are the leading cause of bridge failures, with some researchers estimating that scour alone causes the collapse of 20–100 bridges per year. Traditional methods for predicting scour often lack robustness, hindering effective risk-based management. Recent advancements have introduced artificial intelligence (AI) and machine learning (ML) techniques to enhance scour prediction. For instance, ScourCast offers an AI-powered platform for real-time scour forecasting and risk assessment, integrating sensor data to improve bridge scour management. (scourcast.com)
+Bridge scour, the erosion of riverbeds around bridge foundations due to flowing water, is a leading cause of bridge failures worldwide, accounting for approximately 31.53% of hydraulic failures. In the United States, hydraulic-related issues are the leading cause of bridge failures, with some researchers estimating that scour alone causes the collapse of 20–100 bridges per year. Traditional methods for predicting scour often lack robustness, hindering effective risk-based management. Recent advancements have introduced artificial intelligence (AI) and machine learning (ML) techniques to enhance scour prediction. For instance, ScourCast offers an AI-powered platform for real-time scour forecasting and risk assessment, integrating sensor data to improve bridge scour management.
+#v(0.3em)
 Additionally, studies have demonstrated that AI models, such as Decision Tree Regressors and XGBoost, outperform traditional regression methods in estimating equilibrium scour depth around bridge abutments, highlighting the potential of AI in hydraulic engineering. Furthermore, the integration of physics-based equations into deep learning models has shown promise in reducing forecasting errors by up to 50%, indicating a significant improvement over purely data-driven approaches. These developments suggest that AI and ML methodologies, when combined with real-time monitoring systems, can revolutionize bridge scour risk management, offering more accurate and timely predictions to safeguard infrastructure. 
 
 #v(1.0em)
 
-THIS PARAGRAPH CAME FROM PREVIOUS CONCLUSION, MAY BE HERE. In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour.
+In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour.
 
 #v(1.0em)
 
