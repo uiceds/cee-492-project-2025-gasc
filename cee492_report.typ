@@ -84,7 +84,7 @@ Additionally, studies have demonstrated that AI models, such as Decision Tree Re
 
 #v(1.0em)
 
-In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour.
+In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour2021.
 
 #v(1.0em)
 
