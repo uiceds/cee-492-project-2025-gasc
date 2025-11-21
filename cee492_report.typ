@@ -101,11 +101,11 @@ $ V_c = K_u y_1^(1/6) D_50^(1/2) $
   2. Abutment Scour - The Frolich Equation
   $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a 
   
-  $#v(0.3em) 
+  #v(0.3em) 
 
   While initial goals were to create a model that could directly utilize these equations, the complexity was too high given the available resourches. As such, making the connection to these equations is left to future work.
 
-  $#v(0.3em) 
+  #v(0.3em) 
 
 = Exploratory Data Analysis (EDA)
 
