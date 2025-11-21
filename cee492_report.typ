@@ -60,7 +60,7 @@ The load paths of bridges eventually lead to the Earth and the soil or rock with
 
 In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment.  In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
 #v(0.3em)
-This historic event highlights how scour can be a serious public safety issue. Figure 1 below shows the afterman of the collapse, which took the lives of ten people. While this may be an extreme case, it serves as a grim reminder of what this research seeks to prevent. We can ask hypothetical questions to relate this tragedy to the current study:
+This historic event highlights how scour can be a serious public safety issue. Figure 1 below shows the aftermath of the collapse, which took the lives of ten people. While this may be an extreme case, it serves as a grim reminder of what this research seeks to prevent. We can ask hypothetical questions to relate this tragedy to the current study:
 
 #v(0.3em)
 
@@ -78,13 +78,13 @@ While the number of these hypothetical questions could begin to approach infinit
 
 === State of the Practice
 
-Bridge scour, the erosion of riverbeds around bridge foundations due to flowing water, is a leading cause of bridge failures worldwide, accounting for approximately 31.53% of hydraulic failures. In the United States, hydraulic-related issues are the leading cause of bridge failures, with some researchers estimating that scour alone causes the collapse of 20–100 bridges per year. Traditional methods for predicting scour often lack robustness, hindering effective risk-based management. Recent advancements have introduced artificial intelligence (AI) and machine learning (ML) techniques to enhance scour prediction. For instance, ScourCast offers an AI-powered platform for real-time scour forecasting and risk assessment, integrating sensor data to improve bridge scour management.
+Bridge scour, the erosion of riverbeds around bridge foundations due to flowing water, is a leading cause of bridge failures worldwide, accounting for approximately 31% of hydraulic failures. Traditional methods for predicting scour often lack robustness, hindering effective risk-based management. Recent advancements have introduced artificial intelligence (AI) and machine learning (ML) techniques to enhance scour prediction. For instance, ScourCast offers an AI-powered platform for real-time scour forecasting and risk assessment, integrating sensor data to improve bridge scour management.
 #v(0.3em)
 Additionally, studies have demonstrated that AI models, such as Decision Tree Regressors and XGBoost, outperform traditional regression methods in estimating equilibrium scour depth around bridge abutments, highlighting the potential of AI in hydraulic engineering. Furthermore, the integration of physics-based equations into deep learning models has shown promise in reducing forecasting errors by up to 50%, indicating a significant improvement over purely data-driven approaches. These developments suggest that AI and ML methodologies, when combined with real-time monitoring systems, can revolutionize bridge scour risk management, offering more accurate and timely predictions to safeguard infrastructure. 
 
 #v(1.0em)
 
-In addition to model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour2021.
+Along with strictly investigating model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour2021.
 
 #v(1.0em)
 
@@ -102,7 +102,7 @@ $ V_c = K_u y_1^(1/6) D_50^(1/2) $
 
 To effectively apply the equations, we'll need to make informed assumptions. Since this is a Department of Transportation (DOT) project, our team plans to reference various publicly available DOT sources to make these assumptions. We'll then calculate or estimate variables related to flow velocity, streambed/channel geometry, and pier geometry using the gathered data. #v(0.3em)
 
-==== Variables Involved with Scour
+==== Basic Variables Involved with Scour
 
 Channel slope, cross-sectional area, volumetric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
 
@@ -145,7 +145,7 @@ The referenced tables and figures provide a brief example of data included in ea
 "1556479.323",	"1167960.241",	"3950.23",	"2.36",
 "1556476.053",	"1167965.477",	"3949.06",	"8.53",
 "1556474.651",	"1167967.723",	"3948.09",	"11.18",
-"1556473.177",	"1167970.083",	"3946.08",	"13.96",
+"...",	"...",	"...",	"...",
 
   ),
 ) <table-example>
@@ -160,7 +160,7 @@ The referenced tables and figures provide a brief example of data included in ea
     "8.0", "3.8", "Yes",
     "12.0", "5.9", "Yes",
     "18.0", "3.8", "Yes",
-    "22.0", "1.8", "No",
+    "...", "...", "...",
 
   ),
 ) <table-example>
@@ -183,7 +183,7 @@ The referenced tables and figures provide a brief example of data included in ea
 "P3",	"3313.516",	"136.27",	"140.77",	"Known",
 "P2", "3314.016",	"207.96",	"212.46",	"Known",
 "P2",	"3307.516",	"207.96",	"212.46",	"Known",
-"P2",	"3307.516",	"216.96",	"212.46",	"Known",
+"...",	"...",	"...",	"...",	"...",
 
   ),
 ) <table-example>
@@ -198,7 +198,7 @@ The referenced tables and figures provide a brief example of data included in ea
 "1102295.2",	"1913867.71",	"3204.07",
 "1102296.49",	"1913868.04",	"3204.03",
 "1102297.12",	"1913868.05",	"3203.98",
-"1102297.7",	"1913868.06", "3203.9",
+"...","...","..." ,
 
 
   ),
