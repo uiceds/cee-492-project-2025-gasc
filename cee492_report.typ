@@ -52,9 +52,13 @@ This study has been motivated by the potential to apply the principles of data s
 #v(0.3em)
 Given this context, the project team’s primary research hypothesis is that an analysis of historical stream bed profile data, when processed using data science methodologies, can reveal detectable patterns and key indicators related to scour behavior at specific bridge locations if the necessary, yet rudimentary, data is collected. This study specifically investigates this hypothesis by applying the Julia programming language to analyze stream bed profile data supplied by the USGS for select bridges in the state of Montana. While the precise scope of the project evolved during the Exploratory Data Analysis (EDA) phase, the fundamental objective remained unchanged: to use data science to uncover actionable insights from hydrological and structural data related to bridge scour.
 
+#v(0.3em)
+
+Along with strictly investigating model improvements, the team tried evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources came from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour2021. More on this subject is covered later in this report. 
+
 == The Problem of Bridge Scour
 
-The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone can result in the cause of 20-100 bridge collapses per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. #v(0.4em) 
+The load paths of bridges eventually lead to the Earth and the soil or rock within.  Water is a powerful force often working against that foundation.  Since bridges often exist to span waterways, they are especially vulnerable to large flood events. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone can result in the cause of 20-100 bridge collapses per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. #v(0.3em) 
 
 === Schoharie Creek Bridge Collapse 
 
@@ -77,19 +81,17 @@ While the number of these hypothetical questions could begin to approach infinit
 ) 
 
 === State of the Practice
+
 Bridge scour is the erosion of sediment, such as sand and gravel, around bridge foundations, including piers and abutments, caused by flowing water. There are three main types of scour: local scour, which occurs around individual piers or abutments due to faster water flow; contraction scour, resulting from the narrowing of the river channel at the bridge, which increases water velocity and sediment removal; and degradational scour, which involves the gradual lowering of the riverbed upstream and downstream of the bridge. This phenomenon accounts for approximately 31.53% of hydraulic failures and is a major cause of bridge collapses worldwide. Traditional methods for predicting scour are often unreliable, but recent advancements in artificial intelligence (AI) and machine learning (ML) techniques are improving prediction accuracy.
-#v(1.0em)
+#v(0.3em)
 Additionally, studies have demonstrated that AI models, such as Decision Tree Regressors and XGBoost, outperform traditional regression methods in estimating equilibrium scour depth around bridge abutments, highlighting the potential of AI in hydraulic engineering. Furthermore, the integration of physics-based equations into deep learning models has shown promise in reducing forecasting errors by up to fifthy percent, indicating a significant improvement over purely data-driven approaches. These developments suggest that AI and ML methodologies, when combined with real-time monitoring systems, can revolutionize bridge scour risk management, offering more accurate and timely predictions to safeguard infrastructure. 
 
-#v(1.0em)
+#v(0.3em)
 
-Along with strictly investigating model improvements, the team has begun evalauating existing industry and academic sources in order to better contexualize the findings of this project. Initial sources come from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour2021.
+Athough there are five types of scour, this project and its findings most closesly relate to two specifc types, which are described by the below empirical equations.
 
-#v(1.0em)
+#v(0.3em)
 
-==== Advanced Scour Modeling
-
-Athough there are five types of scour, we will focus on the two main causes, which are described by empirical equations accordingly:#v(0.3em)
 1. Contraction Scour - 
   1. Laursen Live Bed or Clear Water Scour Equation
 $ V_c = K_u y_1^(1/6) D_50^(1/2) $
@@ -97,13 +99,13 @@ $ V_c = K_u y_1^(1/6) D_50^(1/2) $
   1. Pier Scour - The Colorado State University (CSU) Equation
   $ y_s = 2.0 K_1 K_2 K_3 K_4 a^0.65 y_1^0.35 "Fr"^0.43 $
   2. Abutment Scour - The Frolich Equation
-  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a $#v(0.3em)
+  $ y_s = 2.27 K_1 K_2 (L')^0.43 y_a^0.57 "Fr"^0.61 + y_a 
+  
+  $#v(0.3em) 
 
-To effectively apply the equations, we'll need to make informed assumptions. Since this is a Department of Transportation (DOT) project, our team plans to reference various publicly available DOT sources to make these assumptions. We'll then calculate or estimate variables related to flow velocity, streambed/channel geometry, and pier geometry using the gathered data. #v(0.3em)
+  While initial goals were to create a model that could directly utilize these equations, the complexity was too high given the available resourches. As such, making the connection to these equations is left to future work.
 
-==== Basic Variables Involved with Scour
-
-Channel slope, cross-sectional area, volumetric flow rates, contraction geometry, soil type and grain size, and bridge geometry all contribute to the interaction of water and bridge substructures.  
+  $#v(0.3em) 
 
 = Exploratory Data Analysis (EDA)
 
