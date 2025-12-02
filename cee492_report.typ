@@ -59,8 +59,6 @@ Given this context, the primary research hypothesis is that an analysis of histo
 
 #v(0.3em)
 
-#highlight[ Initial sources came from The _Journal of Hydrology_ @Anderson, _River Research and Applications_ @Brown, _Water Resources Research_ @Davis, and the _Journal of the Transportation Research Board_ @Yousefpour2021. More on this subject is covered later in this report.] 
-
 == The Problem of Bridge Scour
 
 Bridge foundations transfer structural loads to the underlying soil or bedrock. However, hydraulic forces, particularly during flood events, can compromise this stability through scour, which is the erosion of sediment around abutments and piers. In fact, hydraulic-related issues are the leading cause of bridge failures in The United States @LeeBridge. Some researchers have even estimated that scour alone can result in the cause of 20-100 bridge collapses per year in the United States @Flintetal. There are complex interactions which drive potential bridge failures. #v(0.3em) 
@@ -70,14 +68,10 @@ Bridge foundations transfer structural loads to the underlying soil or bedrock. 
 In 1987, the Schorharie Creek Bridge collapse in New York State, which failed due to undermining at an in-water footing, led to new and more detailed analysis and federal requirements involving channel condition and cross-channel measurment.  In the most recent updates to inspection coding guidelines, scour vulnerability has been further refined to consider whether scour affects substructure strength. 
 #v(0.3em)
 This historic event highlights how scour can be a serious public safety issue. Figure 1 below shows the aftermath of the collapse, which took the lives of ten people. While this may be an extreme case, it serves as a grim reminder of what this research seeks to prevent. We can ask hypothetical questions to relate this tragedy to the current study:
-
 #v(0.3em)
-
 -	What if the magnitude of scour potential had been identified prior to this event?
 -	What if inspection frequency was optimized to allow for high-quality assessment?
-
 #v(0.3em)
-
 While the number of these hypothetical questions could begin to approach infinity, the event has already occurred. The focus now must shift to preventing the next disaster of this magnitude. By leveraging modern data science and stream profile analysis, we aim to move from reactive "what-ifs" to proactive prediction. 
 
 #figure(
@@ -90,11 +84,8 @@ While the number of these hypothetical questions could begin to approach infinit
 Bridge scour is the erosion of sediment, such as sand and gravel, around bridge foundations, including piers and abutments, caused by flowing water. There are three main types of scour: local scour, which occurs around individual piers or abutments due to faster water flow; contraction scour, resulting from the narrowing of the river channel at the bridge, which increases water velocity and sediment removal; and degradational scour, which involves the gradual lowering of the riverbed upstream and downstream of the bridge @Pizarro. This phenomenon accounts for approximately 31.53% of hydraulic failures and is a major cause of bridge collapses worldwide @Xiong. Traditional methods for predicting scour are often unreliable @Pizarro, but recent advancements in artificial intelligence (AI) and machine learning (ML) techniques are improving prediction accuracy @Yousefpour2021.
 #v(0.3em)
 Additionally, studies have demonstrated that AI models, such as Decision Tree Regressors and XGBoost, outperform traditional regression methods in estimating equilibrium scour depth around bridge abutments, highlighting the potential of AI in hydraulic engineering @Uzun. Furthermore, the integration of physics-based equations into deep learning models has shown promise in reducing forecasting errors by up to fifthy percent, indicating a significant improvement over purely data-driven approaches @Yousefpour2024. These developments suggest that AI and ML methodologies, when combined with real-time monitoring systems, can revolutionize bridge scour risk management, offering more accurate and timely predictions to safeguard infrastructure. 
-
 #v(0.3em)
-
 Athough there are five types of scour, this project and its findings most closesly relate to two specifc types, which are described by the below empirical equations.
-
 #v(0.3em)
 
 1. Contraction Scour - 
